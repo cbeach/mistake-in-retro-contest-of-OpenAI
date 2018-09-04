@@ -1,0 +1,3734 @@
+{
+  "1942-Nes": [
+    "1Player.Level1"
+  ],
+  "1943-Nes": [
+    "Level1"
+  ],
+  "3NinjasKickBack-Genesis": [
+    "1Player.Colt.Level1"
+  ],
+  "8Eyes-Nes": [
+    "1Player.Arabia.Level1"
+  ],
+  "AaahhRealMonsters-Genesis": [
+    "Level1"
+  ],
+  "AbadoxTheDeadlyInnerWar-Nes": [
+    "Level1"
+  ],
+  "AcceleBrid-Snes": [
+    "SilverMarine.DefaultSettings.Level1"
+  ],
+  "ActRaiser2-Snes": [
+    "Level1"
+  ],
+  "ActionPachio-Snes": [
+    "Level1"
+  ],
+  "AddamsFamily-GameBoy": [
+    "Level1"
+  ],
+  "AddamsFamily-Genesis": [
+    "Level1"
+  ],
+  "AddamsFamily-Nes": [
+    "Level1"
+  ],
+  "AddamsFamily-Sms": [
+    "Level1"
+  ],
+  "AddamsFamily-Snes": [
+    "Level1"
+  ],
+  "AddamsFamilyPugsleysScavengerHunt-Nes": [
+    "Level1"
+  ],
+  "AddamsFamilyPugsleysScavengerHunt-Snes": [
+    "Level1"
+  ],
+  "AdvancedBusterhawkGleylancer-Genesis": [
+    "NormalMover.Stage1"
+  ],
+  "Adventure-Atari2600": [
+    "Start"
+  ],
+  "AdventureIsland-GameBoy": [
+    "Level1"
+  ],
+  "AdventureIsland3-Nes": [
+    "Level1"
+  ],
+  "AdventureIslandII-Nes": [
+    "FernIsland.Level1"
+  ],
+  "AdventuresOfBatmanAndRobin-Genesis": [
+    "Level1.Batman"
+  ],
+  "AdventuresOfBayouBilly-Nes": [
+    "GameA.Level1"
+  ],
+  "AdventuresOfDinoRiki-Nes": [
+    "1Player.Level1"
+  ],
+  "AdventuresOfDrFranken-Snes": [
+    "Level1"
+  ],
+  "AdventuresOfKidKleets-Snes": [
+    "Level1.London"
+  ],
+  "AdventuresOfMightyMax-Genesis": [
+    "Level1"
+  ],
+  "AdventuresOfMightyMax-Snes": [
+    "Level1"
+  ],
+  "AdventuresOfRockyAndBullwinkleAndFriends-Genesis": [
+    "MainGame.Level1"
+  ],
+  "AdventuresOfRockyAndBullwinkleAndFriends-Nes": [
+    "Level1"
+  ],
+  "AdventuresOfRockyAndBullwinkleAndFriends-Snes": [
+    "MainGame.Level1"
+  ],
+  "AdventuresOfStarSaver-GameBoy": [
+    "Level1"
+  ],
+  "AdventuresOfYogiBear-Snes": [
+    "Level1.SnowBusiness"
+  ],
+  "AeroFighters-Snes": [
+    "Level1.USA"
+  ],
+  "AeroStar-GameBoy": [
+    "Easy.Level1"
+  ],
+  "AeroTheAcroBat-Snes": [
+    "Level1"
+  ],
+  "AeroTheAcroBat2-Genesis": [
+    "Level1"
+  ],
+  "AeroTheAcroBat2-Snes": [
+    "Level1.BellCastle"
+  ],
+  "AfterBurnerII-Genesis": [
+    "Level0.DefaultOptions",
+    "Level1.DefaultOptions"
+  ],
+  "AfterBurst-GameBoy": [
+    "Level1"
+  ],
+  "AirBuster-Genesis": [
+    "1Player.Level1"
+  ],
+  "AirCavalry-Snes": [
+    "1Player.MiddleEast.Level1"
+  ],
+  "AirDiver-Genesis": [
+    "NorthAmerica.Level1"
+  ],
+  "AirRaid-Atari2600": [
+    "Start"
+  ],
+  "Airstriker-Genesis": [
+    "Level1"
+  ],
+  "Airwolf-Nes": [
+    "Level1"
+  ],
+  "AlfredChicken-GameBoy": [
+    "Level1"
+  ],
+  "AlfredChicken-Nes": [
+    "Level1"
+  ],
+  "AlfredChicken-Snes": [
+    "Level1"
+  ],
+  "Alien-Atari2600": [
+    "Start"
+  ],
+  "Alien3-Nes": [
+    "Level1"
+  ],
+  "Alien3-Sms": [
+    "Level1"
+  ],
+  "AlienSoldier-Genesis": [
+    "DefaultSettings.Level1",
+    "DefaultSettings.Level10",
+    "DefaultSettings.Level11",
+    "DefaultSettings.Level12",
+    "DefaultSettings.Level13",
+    "DefaultSettings.Level14",
+    "DefaultSettings.Level15",
+    "DefaultSettings.Level16",
+    "DefaultSettings.Level17",
+    "DefaultSettings.Level18",
+    "DefaultSettings.Level19",
+    "DefaultSettings.Level2",
+    "DefaultSettings.Level20",
+    "DefaultSettings.Level21",
+    "DefaultSettings.Level22",
+    "DefaultSettings.Level23",
+    "DefaultSettings.Level24",
+    "DefaultSettings.Level25",
+    "DefaultSettings.Level3",
+    "DefaultSettings.Level4",
+    "DefaultSettings.Level5",
+    "DefaultSettings.Level6",
+    "DefaultSettings.Level7",
+    "DefaultSettings.Level8",
+    "DefaultSettings.Level9"
+  ],
+  "AlienSyndrome-Sms": [
+    "Level1"
+  ],
+  "AlienVsPredator-Snes": [
+    "Level1"
+  ],
+  "Alleyway-GameBoy": [
+    "Level1"
+  ],
+  "AlphaMission-Nes": [
+    "Level1"
+  ],
+  "AlteredBeast-Genesis": [
+    "Level1"
+  ],
+  "Amagon-Nes": [
+    "Level1"
+  ],
+  "AmazingPenguin-GameBoy": [
+    "Level1"
+  ],
+  "AmericanGladiators-Genesis": [
+    "1Player.Level1"
+  ],
+  "Amidar-Atari2600": [
+    "Start"
+  ],
+  "ArchRivalsTheArcadeGame-Genesis": [
+    "1Player.Tyrone.Level1"
+  ],
+  "ArcherMacleansSuperDropzone-Snes": [
+    "Level1"
+  ],
+  "ArdyLightfoot-Snes": [
+    "Level1",
+    "Level1-1"
+  ],
+  "Argus-Nes": [
+    "1Player.Level1"
+  ],
+  "ArielTheLittleMermaid-Genesis": [
+    "Level1"
+  ],
+  "Arkanoid-Nes": [
+    "Level1"
+  ],
+  "ArkistasRing-Nes": [
+    "Level1"
+  ],
+  "Armadillo-Nes": [
+    "Level1",
+    "Level1.City"
+  ],
+  "ArrowFlash-Genesis": [
+    "Stage1"
+  ],
+  "ArtOfFighting-Genesis": [
+    "1Player.Ryo.Level1"
+  ],
+  "ArtOfFighting-Snes": [
+    "1Player.StoryMode.Ryo.Level1"
+  ],
+  "Assault-Atari2600": [
+    "Start"
+  ],
+  "Asterix-Atari2600": [
+    "Start"
+  ],
+  "Asterix-Sms": [
+    "Level1"
+  ],
+  "Asterix-Snes": [
+    "Level1"
+  ],
+  "AsterixAndObelix-GameBoy": [
+    "English.Obelix.Level1"
+  ],
+  "AsterixAndTheGreatRescue-Genesis": [
+    "Asterix.Level1"
+  ],
+  "AsterixAndTheGreatRescue-Sms": [
+    "Level1.Easy"
+  ],
+  "AsterixAndThePowerOfTheGods-Genesis": [
+    "RomanCampAquarium.Level1",
+    "RomanCampTotorum.Level1"
+  ],
+  "AsterixAndTheSecretMission-Sms": [
+    "English.1Player.Asterix.Level1"
+  ],
+  "Asteroids-Atari2600": [
+    "Start"
+  ],
+  "Asteroids-GameBoy": [
+    "Difficulty2.1Player.Level1"
+  ],
+  "AstroRabby-GameBoy": [
+    "Level1"
+  ],
+  "AstroRoboSasa-Nes": [
+    "Level1"
+  ],
+  "AstroWarrior-Sms": [
+    "Level1"
+  ],
+  "Astyanax-Nes": [
+    "Level1"
+  ],
+  "Athena-Nes": [
+    "Level1"
+  ],
+  "Atlantis-Atari2600": [
+    "Start"
+  ],
+  "AtlantisNoNazo-Nes": [
+    "Level1"
+  ],
+  "AtomicRoboKid-Genesis": [
+    "Act1"
+  ],
+  "AtomicRunner-Genesis": [
+    "Level1"
+  ],
+  "AttackAnimalGakuen-Nes": [
+    "Level1"
+  ],
+  "AttackOfTheKillerTomatoes-GameBoy": [
+    "Level1"
+  ],
+  "AttackOfTheKillerTomatoes-Nes": [
+    "Level1"
+  ],
+  "AwesomePossumKicksDrMachinosButt-Genesis": [
+    "Level1"
+  ],
+  "Axelay-Snes": [
+    "StraightLaser.RoundVulcan.MetroMissile.Level1"
+  ],
+  "AyrtonSennasSuperMonacoGPII-Genesis": [
+    "Automatic.Track1.Level1"
+  ],
+  "BOB-Genesis": [
+    "Level1"
+  ],
+  "BOB-Snes": [
+    "Level1"
+  ],
+  "BWings-Nes": [
+    "1Player.Cannon.Level1"
+  ],
+  "BackToTheFuturePartIII-Genesis": [
+    "Level1"
+  ],
+  "BadDudes-Nes": [
+    "1Player.Level1.Blade"
+  ],
+  "BadStreetBrawler-Nes": [
+    "Level1"
+  ],
+  "BakuretsuSenshiWarrior-GameBoy": [
+    "Warrior.Level1"
+  ],
+  "BalloonFight-Nes": [
+    "Level1"
+  ],
+  "BalloonKid-GameBoy": [
+    "Level1"
+  ],
+  "Baltron-Nes": [
+    "1Player.Level1"
+  ],
+  "BananaPrince-Nes": [
+    "Level1"
+  ],
+  "BanishingRacer-GameBoy": [
+    "Level1"
+  ],
+  "BankHeist-Atari2600": [
+    "Start"
+  ],
+  "Barbie-Nes": [
+    "Level1"
+  ],
+  "BarbieGameGirl-GameBoy": [
+    "Level1"
+  ],
+  "BarkleyShutUpAndJam-Genesis": [
+    "Oakland.SirCharlesAndSmoothyVsStonewallAndNewts"
+  ],
+  "BarkleyShutUpAndJam2-Genesis": [
+    "Exhibition.KinoAndAngstaVsNewtsAndTino.Level1"
+  ],
+  "BarneysHideAndSeekGame-Genesis": [
+    "Level1"
+  ],
+  "BartSimpsonsEscapeFromCampDeadly-GameBoy": [
+    "Level1"
+  ],
+  "Batman-Genesis": [
+    "Level1"
+  ],
+  "BatmanReturns-Genesis": [
+    "Level1"
+  ],
+  "BatmanReturns-Nes": [
+    "Level1-1"
+  ],
+  "BatmanReturns-Snes": [
+    "Level1"
+  ],
+  "BattleArenaToshinden-GameBoy": [
+    "1Player.EijiVsKayin.Level1"
+  ],
+  "BattleBull-GameBoy": [
+    "1Player.Engine.Level1"
+  ],
+  "BattleMasterKyuukyokuNoSenshiTachi-Snes": [
+    "1Player.SyohVsChan.Level1"
+  ],
+  "BattleSquadron-Genesis": [
+    "Level1"
+  ],
+  "BattleTechAGameOfArmoredCombat-Genesis": [
+    "1Player.Level1"
+  ],
+  "BattleUnitZeoth-GameBoy": [
+    "Level1"
+  ],
+  "BattleZequeDen-Snes": [
+    "DefaultSettings.RedBall.Level1"
+  ],
+  "BattleZone-Atari2600": [
+    "Start"
+  ],
+  "Battletoads-Genesis": [
+    "Level1"
+  ],
+  "Battletoads-Nes": [
+    "Level1"
+  ],
+  "BattletoadsDoubleDragon-Genesis": [
+    "1Player.Rash.Level1-1"
+  ],
+  "BattletoadsDoubleDragon-Snes": [
+    "1Player.Zitz.Level1"
+  ],
+  "BattletoadsInBattlemaniacs-Snes": [
+    "1Player.Level1"
+  ],
+  "BattletoadsInRagnaroksWorld-GameBoy": [
+    "Level1"
+  ],
+  "BeamRider-Atari2600": [
+    "Start"
+  ],
+  "BeautyAndTheBeastBellesQuest-Genesis": [
+    "DefaultSettings.Level1"
+  ],
+  "BeautyAndTheBeastRoarOfTheBeast-Genesis": [
+    "DefaultSettings.Level1"
+  ],
+  "BebesKids-Snes": [
+    "1Player.Level1.LaShawn"
+  ],
+  "Berzerk-Atari2600": [
+    "Start"
+  ],
+  "BillAndTedsExcellentGameBoyAdventure-GameBoy": [
+    "Level1"
+  ],
+  "BiminiRun-Genesis": [
+    "Level1"
+  ],
+  "BinaryLand-Nes": [
+    "Level1.Gurin"
+  ],
+  "BioHazardBattle-Genesis": [
+    "Level1.TopLeftCharacter",
+    "Level1.TopLeftCharacter.LevelSelect",
+    "Level2.TopLeftCharacter",
+    "Level3.TopLeftCharacter",
+    "Level4.TopLeftCharacter",
+    "Level5.TopLeftCharacter",
+    "Level6.TopLeftCharacter",
+    "Level7.TopLeftCharacter",
+    "Level8.TopLeftCharacter"
+  ],
+  "BioMetal-Snes": [
+    "Level1"
+  ],
+  "BioMiracleBokutteUpa-Nes": [
+    "Level1.Normal"
+  ],
+  "BioSenshiDanIncreaserTonoTatakai-Nes": [
+    "Level1"
+  ],
+  "BirdWeek-Nes": [
+    "Level1"
+  ],
+  "BishoujoSenshiSailorMoon-Genesis": [
+    "SailorMoon.Level1"
+  ],
+  "BishoujoSenshiSailorMoonR-Snes": [
+    "Level1.SailorMoon"
+  ],
+  "BlaZeonTheBioCyborgChallenge-Snes": [
+    "Normal.Level1"
+  ],
+  "BladeEagle-Sms": [
+    "Level1"
+  ],
+  "BladesOfVengeance-Genesis": [
+    "1Player.CharacterInABikini.Level1"
+  ],
+  "BlockKuzushi-Snes": [
+    "Level1"
+  ],
+  "BlockKuzushiGB-GameBoy": [
+    "Level1"
+  ],
+  "Blockout-Genesis": [
+    "1Player.Level1"
+  ],
+  "BodyCount-Genesis": [
+    "Level1"
+  ],
+  "BombJack-GameBoy": [
+    "Level1"
+  ],
+  "BomberRaid-Sms": [
+    "Level1"
+  ],
+  "BonkersWaxUp-Sms": [
+    "Level1.Easy"
+  ],
+  "BoobyBoys-GameBoy": [
+    "1Player.Easy.TopLeftLevel.Level1"
+  ],
+  "BoobyKids-Nes": [
+    "Level1"
+  ],
+  "BoogermanAPickAndFlickAdventure-Genesis": [
+    "Level1"
+  ],
+  "BoogermanAPickAndFlickAdventure-Snes": [
+    "Level1"
+  ],
+  "BoogieWoogieBowling-Genesis": [
+    "1PlayerVsComputer.DefaultSettings.Level1"
+  ],
+  "BoulderDash-GameBoy": [
+    "UpperLeft.Difficulty1.Level1"
+  ],
+  "BoulderDash-Nes": [
+    "Level1-1"
+  ],
+  "Bowling-Atari2600": [
+    "Start"
+  ],
+  "Boxing-Atari2600": [
+    "Start"
+  ],
+  "BoxingLegendsOfTheRing-Genesis": [
+    "1Player.Exhibition.LaMottaVsToney"
+  ],
+  "BramStokersDracula-Genesis": [
+    "DefaultSettings.NormalDifficulty.Level1"
+  ],
+  "BramStokersDracula-Nes": [
+    "MedDifficulty.Level1"
+  ],
+  "BramStokersDracula-Snes": [
+    "Level1"
+  ],
+  "BrawlBrothers-Snes": [
+    "1Player.Hard.Kazan.Bridge"
+  ],
+  "BreakThru-Nes": [
+    "1Player.Mountain.Level1",
+    "ImpossibleBoulders"
+  ],
+  "Breakout-Atari2600": [
+    "Start"
+  ],
+  "BronkieTheBronchiasaurus-Snes": [
+    "Level1"
+  ],
+  "BubbaNStix-Genesis": [
+    "Level1"
+  ],
+  "BubbleAndSqueak-Genesis": [
+    "Level1"
+  ],
+  "BubbleBobble-Nes": [
+    "Level01",
+    "Level02",
+    "Level03",
+    "Level04",
+    "Level05",
+    "Level06",
+    "Level07",
+    "Level08",
+    "Level09",
+    "Level10",
+    "Level11",
+    "Level12",
+    "Level13",
+    "Level14",
+    "Level15",
+    "Level16",
+    "Level17",
+    "Level18",
+    "Level19",
+    "Level20",
+    "Level21",
+    "Level22",
+    "Level23",
+    "Level24",
+    "Level25",
+    "Level26",
+    "Level27",
+    "Level28",
+    "Level29",
+    "Level30",
+    "Level31",
+    "Level32",
+    "Level33",
+    "Level34",
+    "Level35",
+    "Level36",
+    "Level37",
+    "Level38",
+    "Level39",
+    "Level40",
+    "Level41",
+    "Level42",
+    "Level43",
+    "Level44",
+    "Level45",
+    "Level46",
+    "Level47",
+    "Level48",
+    "Level49",
+    "Level50",
+    "Level51",
+    "Level52",
+    "Level53",
+    "Level54",
+    "Level55",
+    "Level56",
+    "Level57",
+    "Level58",
+    "Level59",
+    "Level60",
+    "Level61",
+    "Level62",
+    "Level63",
+    "Level64",
+    "Level65",
+    "Level66",
+    "Level67",
+    "Level68",
+    "Level69",
+    "Level70",
+    "Level71",
+    "Level72",
+    "Level73",
+    "Level74",
+    "Level75",
+    "Level76",
+    "Level77",
+    "Level78",
+    "Level79",
+    "Level80",
+    "Level81",
+    "Level82",
+    "Level83",
+    "Level84",
+    "Level85",
+    "Level86",
+    "Level87",
+    "Level88",
+    "Level89",
+    "Level90",
+    "Level91",
+    "Level92",
+    "Level93",
+    "Level94",
+    "Level95",
+    "Level96",
+    "Level97",
+    "Level98",
+    "Level99"
+  ],
+  "BubbleBobble-Sms": [
+    "Level1"
+  ],
+  "BubbleBobblePart2-Nes": [
+    "Level1"
+  ],
+  "BubbleGhost-GameBoy": [
+    "Level1"
+  ],
+  "BubsyII-Genesis": [
+    "WestWing.FirstFloor.Easy.Level1",
+    "WestWing.FirstFloor.Easy.Level1.KingOfDeNile"
+  ],
+  "BubsyII-Snes": [
+    "1Player.Level1.Egypt"
+  ],
+  "BubsyInClawsEncountersOfTheFurredKind-Genesis": [
+    "Level1"
+  ],
+  "BubsyInClawsEncountersOfTheFurredKind-Snes": [
+    "Level1"
+  ],
+  "BuckyOHare-Nes": [
+    "GreenPlanet.Level1"
+  ],
+  "BugsBunnyBirthdayBlowout-Nes": [
+    "Level1"
+  ],
+  "BullsVersusBlazersAndTheNBAPlayoffs-Genesis": [
+    "2MinutePeriod.BullsVsBlazers.Level1",
+    "DefaultSettings.BullsVsBlazers.Level1"
+  ],
+  "BullsVsLakersAndTheNBAPlayoffs-Genesis": [
+    "BullsVsLakers.DefaultSettings.2MinPeriod.Level1"
+  ],
+  "BuraiFighter-Nes": [
+    "Eagle.Stage1"
+  ],
+  "BurningForce-Genesis": [
+    "Day1Stage1"
+  ],
+  "CacomaKnightInBizyland-Snes": [
+    "Level1"
+  ],
+  "Cadash-Genesis": [
+    "1Player.Fighter.Level1"
+  ],
+  "CalRipkenJrBaseball-Genesis": [
+    "OaklandAtBaltimore.Exhibition.Level1"
+  ],
+  "Caliber50-Genesis": [
+    "Level1"
+  ],
+  "CaliforniaGames-Genesis": [
+    "1Player.1Event.Footbag"
+  ],
+  "Cameltry-Snes": [
+    "Easy.Level1"
+  ],
+  "CannonFodder-Genesis": [
+    "1Player.Mission0",
+    "1Player.Mission1",
+    "1Player.Mission2",
+    "1Player.Mission3"
+  ],
+  "CannonFodder-Snes": [
+    "Level1"
+  ],
+  "CaptainAmericaAndTheAvengers-Genesis": [
+    "1Player.CaptainAmerica.Level1"
+  ],
+  "CaptainAmericaAndTheAvengers-Nes": [
+    "1Player.Tampa"
+  ],
+  "CaptainAmericaAndTheAvengers-Snes": [
+    "1Player.CaptainAmerica.Level1"
+  ],
+  "CaptainCommando-Snes": [
+    "1Player.Mummy.City"
+  ],
+  "CaptainPlanetAndThePlaneteers-Genesis": [
+    "DefaultSettings.Level1"
+  ],
+  "CaptainPlanetAndThePlaneteers-Nes": [
+    "Level1"
+  ],
+  "CaptainSilver-Nes": [
+    "Level1"
+  ],
+  "Carnival-Atari2600": [
+    "Start"
+  ],
+  "Castelian-Nes": [
+    "Level1"
+  ],
+  "CastleOfIllusion-Genesis": [
+    "Level1"
+  ],
+  "Castlevania-Nes": [
+    "Level1"
+  ],
+  "CastlevaniaBloodlines-Genesis": [
+    "Level1-1",
+    "Level1-2",
+    "Level1-3",
+    "Level1-4",
+    "Level1-5",
+    "Level2-1",
+    "Level2-2",
+    "Level3-1",
+    "Level3-2",
+    "Level3-3",
+    "Level3-4",
+    "Level4-1",
+    "Level4-2",
+    "Level5-1",
+    "Level6-1",
+    "Level6-11",
+    "Level6-2",
+    "Level6-6",
+    "Level6-8"
+  ],
+  "CastlevaniaDraculaX-Snes": [
+    "Level1"
+  ],
+  "CastlevaniaIIIDraculasCurse-Nes": [
+    "Level1"
+  ],
+  "CastlevaniaTheNewGeneration-Genesis": [
+    "1Player.JohnMorris.Level1CastleDracula"
+  ],
+  "CatNindenTeyandee-Nes": [
+    "Level1"
+  ],
+  "Centipede-Atari2600": [
+    "Start"
+  ],
+  "ChacknPop-Nes": [
+    "Level1"
+  ],
+  "Challenger-Nes": [
+    "Level1"
+  ],
+  "ChampionsWorldClassSoccer-Genesis": [
+    "1Player.Germany.GermanyVsChile"
+  ],
+  "ChampionshipProAm-Genesis": [
+    "1Player.DefaultSettings.Level1",
+    "Level2",
+    "Level3"
+  ],
+  "ChaosEngine-Genesis": [
+    "1Player.BrigandAndMercenary.Level1"
+  ],
+  "ChaseHQII-Genesis": [
+    "Sports.DefaultSettings.Level1"
+  ],
+  "CheeseCatAstropheStarringSpeedyGonzales-Genesis": [
+    "Level1"
+  ],
+  "CheeseCatAstropheStarringSpeedyGonzales-Sms": [
+    "Level1"
+  ],
+  "ChesterCheetahTooCoolToFool-Genesis": [
+    "Level1"
+  ],
+  "ChesterCheetahTooCoolToFool-Snes": [
+    "Level1"
+  ],
+  "ChesterCheetahWildWildQuest-Genesis": [
+    "Level1.Euphreaka"
+  ],
+  "ChesterCheetahWildWildQuest-Snes": [
+    "Level1.Euphreaka"
+  ],
+  "ChiChisProChallengeGolf-Genesis": [
+    "Level1"
+  ],
+  "ChikiChikiBoys-Genesis": [
+    "1Player.DefaultCharacter.Earth"
+  ],
+  "Choplifter-Nes": [
+    "Level1"
+  ],
+  "ChoplifterIIIRescueSurvive-Snes": [
+    "Level1"
+  ],
+  "ChopperCommand-Atari2600": [
+    "Start"
+  ],
+  "ChouFuyuuYousaiExedExes-Nes": [
+    "1Player.Level1"
+  ],
+  "ChoujikuuYousaiMacross-Nes": [
+    "Level1"
+  ],
+  "ChoujikuuYousaiMacrossScrambledValkyrie-Snes": [
+    "PilotHikaru.Level1"
+  ],
+  "ChubbyCherub-Nes": [
+    "Level1"
+  ],
+  "ChuckRock-Genesis": [
+    "Level1"
+  ],
+  "ChuckRock-Sms": [
+    "Level1"
+  ],
+  "ChuckRock-Snes": [
+    "Level1"
+  ],
+  "ChuckRockIISonOfChuck-Genesis": [
+    "Level1"
+  ],
+  "ChuckRockIISonOfChuck-Sms": [
+    "Level1"
+  ],
+  "CircusCaper-Nes": [
+    "Level1"
+  ],
+  "CircusCharlie-Nes": [
+    "Level1"
+  ],
+  "CityConnection-Nes": [
+    "Level1"
+  ],
+  "ClayFighter-Genesis": [
+    "Level1.BadMrFrostyVsHelga"
+  ],
+  "Claymates-Snes": [
+    "Level1.ClaytonsYard"
+  ],
+  "Cliffhanger-Genesis": [
+    "Level1"
+  ],
+  "Cliffhanger-Nes": [
+    "Level1"
+  ],
+  "Cliffhanger-Snes": [
+    "Level1"
+  ],
+  "CloudMaster-Sms": [
+    "Level1"
+  ],
+  "CluCluLand-Nes": [
+    "Level1"
+  ],
+  "CobraTriangle-Nes": [
+    "Level1"
+  ],
+  "CodeNameViper-Nes": [
+    "Level1.Easy"
+  ],
+  "CollegeSlam-Genesis": [
+    "AlabamaVsPennState.HeadToHead.Level1"
+  ],
+  "Columns-Genesis": [
+    "Arcade.Easy.Level0"
+  ],
+  "ColumnsIII-Genesis": [
+    "1Player.Normal.Level1"
+  ],
+  "CombatCars-Genesis": [
+    "1Player.Jackyl.Level1"
+  ],
+  "ComicalMachineGunJoe-Sms": [
+    "Level1"
+  ],
+  "ComixZone-Genesis": [
+    "Episode1.Page1",
+    "Episode1.Page2",
+    "Episode2.Page1",
+    "Episode2.Page2",
+    "Episode3.Page1",
+    "Episode3.Page2"
+  ],
+  "Conan-Nes": [
+    "Level1"
+  ],
+  "CongosCaper-Snes": [
+    "1Player.Level1"
+  ],
+  "ConquestOfTheCrystalPalace-Nes": [
+    "Level1"
+  ],
+  "ContraForce-Nes": [
+    "Level1"
+  ],
+  "CoolSpot-Genesis": [
+    "Level1"
+  ],
+  "CoolSpot-Sms": [
+    "Level1"
+  ],
+  "CoolSpot-Snes": [
+    "Level1"
+  ],
+  "CosmicEpsilon-Nes": [
+    "Level1"
+  ],
+  "CosmoGangTheVideo-Snes": [
+    "1Player.Area1.Normal"
+  ],
+  "CrackDown-Genesis": [
+    "1Player.Level1"
+  ],
+  "CrazyClimber-Atari2600": [
+    "Start"
+  ],
+  "CrossFire-Nes": [
+    "Level1"
+  ],
+  "CrueBallHeavyMetalPinball-Genesis": [
+    "Level1"
+  ],
+  "Curse-Genesis": [
+    "Level1"
+  ],
+  "CutieSuzukiNoRingsideAngel-Genesis": [
+    "Level1.DefaultSettings"
+  ],
+  "CutthroatIsland-Genesis": [
+    "1Player.Level1"
+  ],
+  "CyberShinobi-Sms": [
+    "Level1"
+  ],
+  "Cyberball-Genesis": [
+    "1Player.Dallas.DefaultSettings"
+  ],
+  "Cybernator-Snes": [
+    "Level1"
+  ],
+  "CyborgJustice-Genesis": [
+    "1Player.NormalHand.Level1-1"
+  ],
+  "DJBoy-Genesis": [
+    "Level1"
+  ],
+  "DaffyDuckInHollywood-Sms": [
+    "DefaultSettings.Level1"
+  ],
+  "DaffyDuckTheMarvinMissions-Snes": [
+    "Level1"
+  ],
+  "DaisenpuuTwinHawk-Genesis": [
+    "1Player.Easy.Level1"
+  ],
+  "DananTheJungleFighter-Sms": [
+    "Level1"
+  ],
+  "DangerousSeed-Genesis": [
+    "Level1"
+  ],
+  "DariusForce-Snes": [
+    "1Player.Character1.Level1"
+  ],
+  "DariusII-Genesis": [
+    "Level1"
+  ],
+  "DariusTwin-Snes": [
+    "1Player.Level1"
+  ],
+  "DarkCastle-Genesis": [
+    "Easy.Trouble1"
+  ],
+  "Darkman-Nes": [
+    "Level1"
+  ],
+  "Darwin4081-Genesis": [
+    "Level1"
+  ],
+  "DashGalaxyInTheAlienAsylum-Nes": [
+    "Level1"
+  ],
+  "DashinDesperadoes-Genesis": [
+    "Level1"
+  ],
+  "DavidRobinsonsSupremeCourt-Genesis": [
+    "1Player.Exhibition.LAVsNY.1stQuarter"
+  ],
+  "DazeBeforeChristmas-Genesis": [
+    "Level1"
+  ],
+  "DazeBeforeChristmas-Snes": [
+    "1Player.DefaultOptions.Level1"
+  ],
+  "DeadlyMoves-Genesis": [
+    "1Player.JoeVsWarren.Level1"
+  ],
+  "DeathDuel-Genesis": [
+    "Level1.DefaultSettings"
+  ],
+  "DeepDuckTroubleStarringDonaldDuck-Sms": [
+    "Level1.Jungle.Savannah"
+  ],
+  "Defender-Atari2600": [
+    "Start"
+  ],
+  "DefenderII-Nes": [
+    "1PlayerGameA.Level1"
+  ],
+  "DemonAttack-Atari2600": [
+    "Start"
+  ],
+  "DennisTheMenace-Snes": [
+    "Level1"
+  ],
+  "DesertStrikeReturnToTheGulf-Genesis": [
+    "Level1",
+    "Level1.ActuallyNearTargets"
+  ],
+  "DevilCrashMD-Genesis": [
+    "1Player.Level1"
+  ],
+  "DevilishTheNextPossession-Genesis": [
+    "Level1"
+  ],
+  "DickTracy-Genesis": [
+    "Level1"
+  ],
+  "DickTracy-Sms": [
+    "Normal.Level1"
+  ],
+  "DickVitalesAwesomeBabyCollegeHoops-Genesis": [
+    "1Player.CaliforniaVsNevada.1stQuarter"
+  ],
+  "DigDugIITroubleInParadise-Nes": [
+    "Level1"
+  ],
+  "DiggerTheLegendOfTheLostCity-Nes": [
+    "Level1"
+  ],
+  "DimensionForce-Snes": [
+    "Level1"
+  ],
+  "DinoCity-Snes": [
+    "Level1"
+  ],
+  "DinoLand-Genesis": [
+    "Level1"
+  ],
+  "DirtyHarry-Nes": [
+    "Level1"
+  ],
+  "DonDokoDon-Nes": [
+    "Level1"
+  ],
+  "DonkeyKong-Nes": [
+    "1Player.GameA"
+  ],
+  "DonkeyKong3-Nes": [
+    "1PlayerGameA.Level1"
+  ],
+  "DonkeyKongCountry-Snes": [
+    "1Player.CongoJungle.JungleHijinks.Level1",
+    "1Player.CongoJungle.RopeyRampage.Level2"
+  ],
+  "DonkeyKongCountry2-Snes": [
+    "Start.PiratePanic"
+  ],
+  "DonkeyKongCountry3DixieKongsDoubleTrouble-Snes": [
+    "1Player.LakeOrangtanga.Limbo.Level1",
+    "Level2"
+  ],
+  "DonkeyKongJr-Nes": [
+    "GameA.Level1"
+  ],
+  "DoubleDragon-Genesis": [
+    "Level1"
+  ],
+  "DoubleDragon-Nes": [
+    "1Player.ModeA.Level1"
+  ],
+  "DoubleDragonIITheRevenge-Genesis": [
+    "1Player.Level1"
+  ],
+  "DoubleDragonIITheRevenge-Nes": [
+    "1Player.Warrior.Level1"
+  ],
+  "DoubleDragonVTheShadowFalls-Genesis": [
+    "Tournament.Hotel.BillyLeeVsCountdown.Round1"
+  ],
+  "DoubleDribbleThePlayoffEdition-Genesis": [
+    "Playoff.UtahVsMinnesota.Level1"
+  ],
+  "DoubleDunk-Atari2600": [
+    "Start"
+  ],
+  "DrRobotniksMeanBeanMachine-Genesis": [
+    "ScenarioMode.Level1"
+  ],
+  "DragonPower-Nes": [
+    "Level1"
+  ],
+  "DragonSpiritTheNewLegend-Nes": [
+    "Level1"
+  ],
+  "DragonTheBruceLeeStory-Genesis": [
+    "1PlayerStoryMode.Level1"
+  ],
+  "DragonTheBruceLeeStory-Snes": [
+    "1Player.StoryGame"
+  ],
+  "DragonsLair-Snes": [
+    "Level1"
+  ],
+  "DragonsRevenge-Genesis": [
+    "Level1"
+  ],
+  "DreamTeamUSA-Genesis": [
+    "1Player.5MinPeriods.Quarter1"
+  ],
+  "DynamiteDuke-Genesis": [
+    "Level1"
+  ],
+  "DynamiteDuke-Sms": [
+    "Level1"
+  ],
+  "DynamiteHeaddy-Genesis": [
+    "Level2-2",
+    "Level2-3",
+    "Level3-1",
+    "Level3-2",
+    "Level3-3",
+    "Level3-4",
+    "Level4-1",
+    "Level4-2",
+    "Level4-3",
+    "Level4-4",
+    "Level5-1",
+    "Level5-2",
+    "Level5-3",
+    "Level5-4",
+    "Level6-1",
+    "Level6-2",
+    "Level6-3",
+    "Level6-4",
+    "Level7-1",
+    "Level8-1",
+    "Level8-2",
+    "Level8-3",
+    "Level8-4",
+    "Level8-5",
+    "Level9-1",
+    "Level9-2",
+    "Level9-3"
+  ],
+  "ESPNBaseballTonight-Genesis": [
+    "1Player.Exhibition.AssistedFieldingOn.GiantsVsDodgers"
+  ],
+  "EarnestEvans-Genesis": [
+    "Level1"
+  ],
+  "EarthDefenseForce-Snes": [
+    "1Player.Level1.Vulcan"
+  ],
+  "ElViento-Genesis": [
+    "Level1"
+  ],
+  "ElementalMaster-Genesis": [
+    "Stage1.Fire"
+  ],
+  "ElevatorAction-Nes": [
+    "1Player.Level1"
+  ],
+  "EliminateDown-Genesis": [
+    "Round1"
+  ],
+  "Enduro-Atari2600": [
+    "Start"
+  ],
+  "EuropeanClubSoccer-Genesis": [
+    "EuropeanCup.England.Norwich.DefaultSettings.Level1"
+  ],
+  "ExMutants-Genesis": [
+    "1Player.MaleCharacter.Level1"
+  ],
+  "Exerion-Nes": [
+    "1Player.Level1"
+  ],
+  "F1-Genesis": [
+    "Novice.1Player.DefaultSettings.Interlagos"
+  ],
+  "FZSenkiAxisFinalZone-Genesis": [
+    "Level1"
+  ],
+  "FaeryTaleAdventure-Genesis": [
+    "Level1"
+  ],
+  "FamilyDog-Snes": [
+    "Level1"
+  ],
+  "Fantasia-Genesis": [
+    "Level1.DifficultyEasy"
+  ],
+  "FantasticDizzy-Genesis": [
+    "Level1"
+  ],
+  "FantasyZone-Sms": [
+    "Level1"
+  ],
+  "FantasyZoneIIOpaOpaNoNamida-Nes": [
+    "Level1"
+  ],
+  "FantasyZoneIITheTearsOfOpaOpa-Sms": [
+    "Level1.Pastaria"
+  ],
+  "FantasyZoneTheMaze-Sms": [
+    "Plaleaf.Level1"
+  ],
+  "FatalFury-Genesis": [
+    "1Player.RedJacketCharacter.PaoPao.Level1"
+  ],
+  "FatalFury2-Genesis": [
+    "1Player.TerryVsAndy.Italy.Level1"
+  ],
+  "FatalLabyrinth-Genesis": [
+    "Level1"
+  ],
+  "FatalRewind-Genesis": [
+    "Level1"
+  ],
+  "FelixTheCat-Nes": [
+    "Level1"
+  ],
+  "FerrariGrandPrixChallenge-Genesis": [
+    "Level1.NoCustomSettings"
+  ],
+  "FightingMasters-Genesis": [
+    "DirkVsEquus.Level1"
+  ],
+  "FinalBubbleBobble-Sms": [
+    "Level1"
+  ],
+  "FinalFight-Snes": [
+    "Cody.Level1"
+  ],
+  "FinalFight2-Snes": [
+    "1Player.Haggar.Level1"
+  ],
+  "FinalFight3-Snes": [
+    "1Player.Guy.Level1"
+  ],
+  "FinalFightGuy-Snes": [
+    "1Player.Guy.Level1.Slum"
+  ],
+  "FireAndIce-Sms": [
+    "Level1"
+  ],
+  "FirstSamurai-Snes": [
+    "Level1"
+  ],
+  "FishingDerby-Atari2600": [
+    "Start",
+    "Start.2P"
+  ],
+  "FistOfTheNorthStar-Nes": [
+    "Level1"
+  ],
+  "Flicky-Genesis": [
+    "Bird.Level1",
+    "Bird.Level10",
+    "Bird.Level11",
+    "Bird.Level12",
+    "Bird.Level13",
+    "Bird.Level14",
+    "Bird.Level15",
+    "Bird.Level16",
+    "Bird.Level17",
+    "Bird.Level18",
+    "Bird.Level19",
+    "Bird.Level2",
+    "Bird.Level20",
+    "Bird.Level21",
+    "Bird.Level22",
+    "Bird.Level23",
+    "Bird.Level24",
+    "Bird.Level25",
+    "Bird.Level26",
+    "Bird.Level27",
+    "Bird.Level28",
+    "Bird.Level29",
+    "Bird.Level3",
+    "Bird.Level30",
+    "Bird.Level31",
+    "Bird.Level32",
+    "Bird.Level33",
+    "Bird.Level34",
+    "Bird.Level35",
+    "Bird.Level36",
+    "Bird.Level37",
+    "Bird.Level38",
+    "Bird.Level39",
+    "Bird.Level4",
+    "Bird.Level40",
+    "Bird.Level41",
+    "Bird.Level42",
+    "Bird.Level43",
+    "Bird.Level44",
+    "Bird.Level45",
+    "Bird.Level46",
+    "Bird.Level47",
+    "Bird.Level48",
+    "Bird.Level5",
+    "Bird.Level6",
+    "Bird.Level7",
+    "Bird.Level8",
+    "Bird.Level9"
+  ],
+  "Flintstones-Genesis": [
+    "DefaultSettings.Level1"
+  ],
+  "Flintstones-Snes": [
+    "Level1"
+  ],
+  "FlintstonesTheRescueOfDinoAndHoppy-Nes": [
+    "Level1"
+  ],
+  "FlyingDragonTheSecretScroll-Nes": [
+    "Level1"
+  ],
+  "FlyingHero-Nes": [
+    "Level1.Normal"
+  ],
+  "FlyingHeroBugyuruNoDaibouken-Snes": [
+    "Level1"
+  ],
+  "ForemanForReal-Genesis": [
+    "1Player.Exhibition.ForemanVsGlencoe"
+  ],
+  "ForgottenWorlds-Genesis": [
+    "1Player.Level1"
+  ],
+  "FormationZ-Nes": [
+    "Level1"
+  ],
+  "FoxsPeterPanAndThePiratesTheRevengeOfCaptainHook-Nes": [
+    "Level1"
+  ],
+  "FrankThomasBigHurtBaseball-Genesis": [
+    "1Player.Exhibition.BaltimoreVsAtlanta.Level1"
+  ],
+  "Freeway-Atari2600": [
+    "Start"
+  ],
+  "Frogger-Genesis": [
+    "1Player.Level1"
+  ],
+  "FrontLine-Nes": [
+    "Level1"
+  ],
+  "Frostbite-Atari2600": [
+    "Start"
+  ],
+  "FushigiNoOshiroPitPot-Sms": [
+    "1Player.Practice.Level1"
+  ],
+  "GIJoeARealAmericanHero-Nes": [
+    "Level1.SnakeEyes.RockandRoll"
+  ],
+  "GIJoeTheAtlantisFactor-Nes": [
+    "Level1"
+  ],
+  "GadgetTwins-Genesis": [
+    "Level1"
+  ],
+  "Gaiares-Genesis": [
+    "Level1"
+  ],
+  "GainGround-Genesis": [
+    "Round1Stage1",
+    "Round1Stage10",
+    "Round1Stage2",
+    "Round1Stage3",
+    "Round1Stage4",
+    "Round1Stage5",
+    "Round1Stage6",
+    "Round1Stage7",
+    "Round1Stage8",
+    "Round1Stage9",
+    "Round2Stage1",
+    "Round2Stage10",
+    "Round2Stage2",
+    "Round2Stage3",
+    "Round2Stage4",
+    "Round2Stage5",
+    "Round2Stage6",
+    "Round2Stage7",
+    "Round2Stage8",
+    "Round2Stage9",
+    "Round3Stage1",
+    "Round3Stage10",
+    "Round3Stage2",
+    "Round3Stage3",
+    "Round3Stage4",
+    "Round3Stage5",
+    "Round3Stage6",
+    "Round3Stage7",
+    "Round3Stage8",
+    "Round3Stage9",
+    "Round4Stage1",
+    "Round4Stage10",
+    "Round4Stage2",
+    "Round4Stage3",
+    "Round4Stage4",
+    "Round4Stage5",
+    "Round4Stage6",
+    "Round4Stage7",
+    "Round4Stage8",
+    "Round4Stage9",
+    "Round5Stage1",
+    "Round5Stage10",
+    "Round5Stage2",
+    "Round5Stage3",
+    "Round5Stage4",
+    "Round5Stage5",
+    "Round5Stage6",
+    "Round5Stage7",
+    "Round5Stage8",
+    "Round5Stage9"
+  ],
+  "GalagaDemonsOfDeath-Nes": [
+    "1Player.Level1"
+  ],
+  "GalaxyForce-Sms": [
+    "SceneALevel1"
+  ],
+  "GalaxyForceII-Genesis": [
+    "SceneALevel1"
+  ],
+  "Gauntlet-Genesis": [
+    "Arcade.Easy.Warrior.Level1"
+  ],
+  "Gauntlet-Sms": [
+    "Elf.Level1"
+  ],
+  "Geimos-Nes": [
+    "ModeA.1Player.Level1"
+  ],
+  "GeneralChaos-Genesis": [
+    "DefaultOptions.Level1"
+  ],
+  "Geraldinho-Sms": [
+    "1Player.Level1"
+  ],
+  "GhostHouse-Sms": [
+    "1Player.Level1"
+  ],
+  "GhostsnGoblins-Nes": [
+    "Level1"
+  ],
+  "GhoulSchool-Nes": [
+    "Level1"
+  ],
+  "GhoulsnGhosts-Genesis": [
+    "1Player.Level1"
+  ],
+  "Gimmick-Nes": [
+    "Level1"
+  ],
+  "GlobalDefense-Sms": [
+    "Level1"
+  ],
+  "GlobalGladiators-Genesis": [
+    "Level1"
+  ],
+  "Gods-Genesis": [
+    "Level1"
+  ],
+  "Gods-Snes": [
+    "Level1"
+  ],
+  "GokujouParodius-Snes": [
+    "1Player.VicViper"
+  ],
+  "GoldenAxe-Genesis": [
+    "1Player.Arcade.DefaultCharacter.Level1"
+  ],
+  "GoldenAxeIII-Genesis": [
+    "1Player.DefaultCharacter.Level1"
+  ],
+  "Gopher-Atari2600": [
+    "Start"
+  ],
+  "Gradius-Nes": [
+    "Level1"
+  ],
+  "GradiusII-Nes": [
+    "1Player.MissileOption.Level1"
+  ],
+  "GradiusIII-Snes": [
+    "Level1.Mode1.Shield"
+  ],
+  "GradiusTheInterstellarAssault-GameBoy": [
+    "Start"
+  ],
+  "Granada-Genesis": [
+    "Stage1"
+  ],
+  "Gravitar-Atari2600": [
+    "Start"
+  ],
+  "GreatCircusMysteryStarringMickeyAndMinnie-Genesis": [
+    "1Player.Mickey.HauntedCircus.Level1"
+  ],
+  "GreatCircusMysteryStarringMickeyAndMinnie-Snes": [
+    "1Player.DefaultSettings.Mickey.Level1"
+  ],
+  "GreatTank-Nes": [
+    "Level1"
+  ],
+  "GreatWaldoSearch-Genesis": [
+    "Normal.FlyingCarpetLevel"
+  ],
+  "GreendogTheBeachedSurferDude-Genesis": [
+    "Level1"
+  ],
+  "Gremlins2TheNewBatch-Nes": [
+    "Level1"
+  ],
+  "GrindStormer-Genesis": [
+    "1Player.Level1"
+  ],
+  "Growl-Genesis": [
+    "1Player.DefaultSettings.Gen.Level1"
+  ],
+  "GuardianLegend-Nes": [
+    "Level1"
+  ],
+  "GuerrillaWar-Nes": [
+    "Level1"
+  ],
+  "GunNac-Nes": [
+    "Level1"
+  ],
+  "Gunship-Genesis": [
+    "Level1.Easy.FPS",
+    "Level1.Easy.ShmupSidescroller",
+    "Level1.Easy.TravellingSalesmanProblem"
+  ],
+  "Gynoug-Genesis": [
+    "Stage1"
+  ],
+  "Gyrodine-Nes": [
+    "Level1"
+  ],
+  "Gyruss-Nes": [
+    "Stage1.ControlB"
+  ],
+  "HammerinHarry-Nes": [
+    "Level1"
+  ],
+  "HardDrivin-Genesis": [
+    "Level1.DefaultSettings"
+  ],
+  "HarleysHumongousAdventure-Snes": [
+    "Level1"
+  ],
+  "Havoc-Genesis": [
+    "Level1"
+  ],
+  "HeavyBarrel-Nes": [
+    "Level1"
+  ],
+  "HeavyNova-Genesis": [
+    "Level1"
+  ],
+  "HeavyUnitMegaDriveSpecial-Genesis": [
+    "Level1"
+  ],
+  "Hellfire-Genesis": [
+    "Round1.Stage1.Easy"
+  ],
+  "HelloKittyWorld-Nes": [
+    "Level1"
+  ],
+  "Hero-Atari2600": [
+    "Start"
+  ],
+  "HomeAlone-Genesis": [
+    "Level1"
+  ],
+  "HomeAlone2LostInNewYork-Genesis": [
+    "Level1"
+  ],
+  "HomeAlone2LostInNewYork-Nes": [
+    "Level1"
+  ],
+  "Hook-Genesis": [
+    "Level1"
+  ],
+  "Hook-Snes": [
+    "Level1"
+  ],
+  "HuntForRedOctober-Nes": [
+    "Level1"
+  ],
+  "HuntForRedOctober-Snes": [
+    "Level1"
+  ],
+  "Hurricanes-Genesis": [
+    "1Player.DefaultSettings.Level1"
+  ],
+  "Hurricanes-Snes": [
+    "Level1.DefaultSettings"
+  ],
+  "IMGInternationalTourTennis-Genesis": [
+    "Exhibition.BorgVsRios"
+  ],
+  "IceClimber-Nes": [
+    "Level1"
+  ],
+  "IceHockey-Atari2600": [
+    "Start"
+  ],
+  "Ikari-Nes": [
+    "Level1"
+  ],
+  "IkariIIITheRescue-Nes": [
+    "Level1"
+  ],
+  "Ikki-Nes": [
+    "Level1"
+  ],
+  "Imperium-Snes": [
+    "Level1"
+  ],
+  "Incantation-Snes": [
+    "Level1",
+    "Level2"
+  ],
+  "IncredibleCrashDummies-Genesis": [
+    "Level1"
+  ],
+  "IncredibleHulk-Genesis": [
+    "DefaultSettings.Level1"
+  ],
+  "IncredibleHulk-Sms": [
+    "Level1.DefaultOptions"
+  ],
+  "IncredibleHulk-Snes": [
+    "Level1"
+  ],
+  "IndianaJonesAndTheLastCrusade-Genesis": [
+    "Level1"
+  ],
+  "IndianaJonesAndTheTempleOfDoom-Nes": [
+    "Level1"
+  ],
+  "InsectorX-Genesis": [
+    "1Player.Easy.Level1"
+  ],
+  "InsectorX-Nes": [
+    "1Player.ForBoys.Level1"
+  ],
+  "InspectorGadget-Snes": [
+    "Level1"
+  ],
+  "IronSwordWizardsAndWarriorsII-Nes": [
+    "Level1.FirstStage"
+  ],
+  "IshidoTheWayOfStones-Genesis": [
+    "Level1"
+  ],
+  "IsolatedWarrior-Nes": [
+    "Level1"
+  ],
+  "ItchyAndScratchyGame-Snes": [
+    "Level1"
+  ],
+  "IzzysQuestForTheOlympicRings-Genesis": [
+    "Level1"
+  ],
+  "IzzysQuestForTheOlympicRings-Snes": [
+    "Level1"
+  ],
+  "Jackal-Nes": [
+    "Level1"
+  ],
+  "JackieChansActionKungFu-Nes": [
+    "Level1"
+  ],
+  "JajamaruNoDaibouken-Nes": [
+    "Level1"
+  ],
+  "JamesBond007TheDuel-Genesis": [
+    "Level1"
+  ],
+  "JamesBond007TheDuel-Sms": [
+    "Level1"
+  ],
+  "JamesBondJr-Nes": [
+    "Level1"
+  ],
+  "JamesPond2CodenameRoboCod-Sms": [
+    "Level1"
+  ],
+  "JamesPond3-Genesis": [
+    "Level1"
+  ],
+  "JamesPondIICodenameRobocod-Genesis": [
+    "Level1"
+  ],
+  "JamesPondUnderwaterAgent-Genesis": [
+    "Level1"
+  ],
+  "Jamesbond-Atari2600": [
+    "Start"
+  ],
+  "Jaws-Nes": [
+    "Level1"
+  ],
+  "JellyBoy-Snes": [
+    "Level1"
+  ],
+  "JetsonsCogswellsCaper-Nes": [
+    "Level1"
+  ],
+  "JetsonsInvasionOfThePlanetPirates-Snes": [
+    "Level1"
+  ],
+  "JewelMaster-Genesis": [
+    "Level1"
+  ],
+  "JikkyouOshaberiParodius-Snes": [
+    "Option1.VicViper.Default.Level1"
+  ],
+  "JoeAndMac-Genesis": [
+    "Level1"
+  ],
+  "JoeAndMac-Nes": [
+    "Level1"
+  ],
+  "JoeAndMac-Snes": [
+    "1Player.Level1"
+  ],
+  "JoeAndMac2LostInTheTropics-Snes": [
+    "Level1",
+    "Level1.KaliKaliValley"
+  ],
+  "JourneyEscape-Atari2600": [
+    "Start"
+  ],
+  "JourneyToSilius-Nes": [
+    "Level1"
+  ],
+  "Joust-Nes": [
+    "Level1"
+  ],
+  "JuJuDensetsuTokiGoingApeSpit-Genesis": [
+    "1Player.Level1"
+  ],
+  "JudgeDredd-Genesis": [
+    "Level1"
+  ],
+  "JudgeDredd-Snes": [
+    "Level1"
+  ],
+  "JungleBook-Genesis": [
+    "Level1"
+  ],
+  "JungleBook-Nes": [
+    "Level1"
+  ],
+  "JungleBook-Snes": [
+    "Level1"
+  ],
+  "JusticeLeagueTaskForce-Genesis": [
+    "Level1.HeroMode.SupermanVsFlash"
+  ],
+  "KaGeKiFistsOfSteel-Genesis": [
+    "Level1"
+  ],
+  "Kaboom-Atari2600": [
+    "Start"
+  ],
+  "KabukiQuantumFighter-Nes": [
+    "Level1"
+  ],
+  "KaiketsuYanchaMaru2KarakuriLand-Nes": [
+    "Level1"
+  ],
+  "KaiketsuYanchaMaru3TaiketsuZouringen-Nes": [
+    "Level1"
+  ],
+  "KaiteTsukutteAsoberuDezaemon-Snes": [
+    "Level1"
+  ],
+  "KamenNoNinjaAkakage-Nes": [
+    "Level1"
+  ],
+  "Kangaroo-Atari2600": [
+    "Start"
+  ],
+  "KanshakudamaNageKantarouNoToukaidouGojuusanTsugi-Nes": [
+    "Level1"
+  ],
+  "KeroppiToKeroriinuNoSplashBomb-Nes": [
+    "Level1"
+  ],
+  "KidChameleon-Genesis": [
+    "AlienIsle",
+    "AlienTwilight",
+    "BagelBrothers",
+    "BeneathTheTwistedHills",
+    "BlizzardMountain",
+    "BloodySwamp",
+    "BlueLakeWoods1",
+    "BlueLakeWoods2",
+    "BoomerangBosses",
+    "CavesOfIce",
+    "CoralBladeGrotto",
+    "CrabCove",
+    "DevilsMarsh1",
+    "DevilsMarsh2",
+    "DiamondEdge",
+    "Dragonspike",
+    "Elsewhere1",
+    "Elsewhere10",
+    "Elsewhere11",
+    "Elsewhere12",
+    "Elsewhere13",
+    "Elsewhere14",
+    "Elsewhere15",
+    "Elsewhere16",
+    "Elsewhere17",
+    "Elsewhere18",
+    "Elsewhere19",
+    "Elsewhere2",
+    "Elsewhere20",
+    "Elsewhere21",
+    "Elsewhere22",
+    "Elsewhere23",
+    "Elsewhere24",
+    "Elsewhere25",
+    "Elsewhere26",
+    "Elsewhere27",
+    "Elsewhere28",
+    "Elsewhere29",
+    "Elsewhere3",
+    "Elsewhere30",
+    "Elsewhere31",
+    "Elsewhere32",
+    "Elsewhere4",
+    "Elsewhere5",
+    "Elsewhere6",
+    "Elsewhere7",
+    "Elsewhere8",
+    "Elsewhere9",
+    "ForcedEntry",
+    "FrostyDoom",
+    "HiddenCanyon",
+    "HighwaterPass1",
+    "HighwaterPass2",
+    "HillsOfForever",
+    "HillsOfTheWarrior1",
+    "HillsOfTheWarrior2",
+    "HoverboardBeach",
+    "IceGodsVengeance",
+    "IsleOfTheLionLord",
+    "KnightsIsle",
+    "LionsDen",
+    "MadmazeMountain",
+    "MonsterIsland",
+    "Plethora",
+    "PyramidsOfPeril",
+    "ScorpionIsle",
+    "SecretsInTheRocks",
+    "Shishkaboss",
+    "SinisterSewers",
+    "SkyFortress",
+    "SkydragonCastle1",
+    "SkydragonCastle2",
+    "StairwayToOblivion",
+    "StormwalkMountain",
+    "TheBlackPit",
+    "TheCagedBeasts",
+    "TheCliffsOfIllusion",
+    "TheCrypt",
+    "TheCrystalCrags1",
+    "TheCrystalCrags2",
+    "TheDeadlySkyscrapers",
+    "TheFinalMarathon",
+    "TheForbiddenTombs",
+    "TheHillsHaveEyes",
+    "TheLandBelow",
+    "TheNightmarePeaks1",
+    "TheNightmarePeaks2",
+    "ThePinnacle",
+    "TheShimmeringCaves",
+    "TheValleyOfLife",
+    "TheWhisperingWoods1",
+    "TheWhisperingWoods2",
+    "TowersOfBlood",
+    "TunnelsBeneathTheWoods",
+    "UnderSkullMountain1",
+    "UnderSkullMountain2",
+    "UnderSkullMountain3",
+    "WhaleGrotto",
+    "WindCastles1",
+    "WindCastles2",
+    "WindyCity",
+    "WoodsOfDespair1",
+    "WoodsOfDespair2"
+  ],
+  "KidIcarus-Nes": [
+    "Level1"
+  ],
+  "KidKlownInCrazyChase-Snes": [
+    "Level1"
+  ],
+  "KidKlownInNightMayorWorld-Nes": [
+    "Level1"
+  ],
+  "KidNikiRadicalNinja-Nes": [
+    "1Player.Level1"
+  ],
+  "KingOfDragons-Snes": [
+    "1Player.Fighter.Level1"
+  ],
+  "KingOfTheMonsters2-Genesis": [
+    "1Player.DragonVsAtomGuy",
+    "1Player.DragonVsBeetlemaster.Desert"
+  ],
+  "KingOfTheMonsters2-Snes": [
+    "1PlayerVsComputer.Geon.AmericanCity.Level1"
+  ],
+  "KirbysAdventure-Nes": [
+    "Level1"
+  ],
+  "KnightsOfTheRound-Snes": [
+    "1Player.Arthur.Level1"
+  ],
+  "Krull-Atari2600": [
+    "Start"
+  ],
+  "KungFu-Nes": [
+    "1Player.Level1"
+  ],
+  "KungFuHeroes-Nes": [
+    "Level1"
+  ],
+  "KungFuKid-Sms": [
+    "Level1"
+  ],
+  "KungFuMaster-Atari2600": [
+    "Start"
+  ],
+  "LandOfIllusionStarringMickeyMouse-Sms": [
+    "Level1.Forest"
+  ],
+  "LastActionHero-Genesis": [
+    "Level1"
+  ],
+  "LastActionHero-Nes": [
+    "Level1"
+  ],
+  "LastActionHero-Snes": [
+    "Level1"
+  ],
+  "LastBattle-Genesis": [
+    "Level1"
+  ],
+  "LastStarfighter-Nes": [
+    "1Player.Level1"
+  ],
+  "LawnmowerMan-Genesis": [
+    "Level1.Easy"
+  ],
+  "Legend-Snes": [
+    "1Player.DefaultSettings.Level1"
+  ],
+  "LegendOfGalahad-Genesis": [
+    "Level1"
+  ],
+  "LegendOfKage-Nes": [
+    "Level1"
+  ],
+  "LegendOfPrinceValiant-Nes": [
+    "Level1"
+  ],
+  "LegendaryWings-Nes": [
+    "1Player.Level1"
+  ],
+  "LethalEnforcers-Genesis": [
+    "1Player.Joypad"
+  ],
+  "LethalEnforcersIIGunFighters-Genesis": [
+    "1Player.Joypad"
+  ],
+  "LethalWeapon-Snes": [
+    "Level1",
+    "Level1.Mission1"
+  ],
+  "LifeForce-Nes": [
+    "1Player.Level1"
+  ],
+  "LighteningForce-Genesis": [
+    "Strite"
+  ],
+  "LineOfFire-Sms": [
+    "Level1"
+  ],
+  "LittleMermaid-Nes": [
+    "Level1"
+  ],
+  "LowGManTheLowGravityMan-Nes": [
+    "Level1"
+  ],
+  "LuckyDimeCaperStarringDonaldDuck-Sms": [
+    "1Player.Level1"
+  ],
+  "MCKids-Nes": [
+    "1Player.Level1"
+  ],
+  "MUSHA-Genesis": [
+    "Level1"
+  ],
+  "MagicBoy-Snes": [
+    "1Player.Level1"
+  ],
+  "MagicSword-Snes": [
+    "1Player.GroundLevel"
+  ],
+  "MagicalQuestStarringMickeyMouse-Snes": [
+    "Level1"
+  ],
+  "MagicalTaruruutoKun-Genesis": [
+    "Level1",
+    "Level10",
+    "Level11",
+    "Level12",
+    "Level13",
+    "Level14",
+    "Level15",
+    "Level16",
+    "Level17",
+    "Level18",
+    "Level19",
+    "Level2",
+    "Level20",
+    "Level21",
+    "Level22",
+    "Level23",
+    "Level24",
+    "Level25",
+    "Level26",
+    "Level27",
+    "Level28",
+    "Level29",
+    "Level3",
+    "Level30",
+    "Level31",
+    "Level32",
+    "Level33",
+    "Level34",
+    "Level35",
+    "Level36",
+    "Level37",
+    "Level38",
+    "Level39",
+    "Level4",
+    "Level40",
+    "Level41",
+    "Level42",
+    "Level43",
+    "Level44",
+    "Level45",
+    "Level46",
+    "Level47",
+    "Level48",
+    "Level49",
+    "Level5",
+    "Level50",
+    "Level51",
+    "Level52",
+    "Level53",
+    "Level54",
+    "Level55",
+    "Level56",
+    "Level57",
+    "Level58",
+    "Level59",
+    "Level6",
+    "Level60",
+    "Level61",
+    "Level62",
+    "Level63",
+    "Level64",
+    "Level65",
+    "Level66",
+    "Level67",
+    "Level7",
+    "Level8",
+    "Level9",
+    "LevelMaze"
+  ],
+  "Magmax-Nes": [
+    "1Player.Level1"
+  ],
+  "MaouRenjishi-Genesis": [
+    "1Player.Level1"
+  ],
+  "MappyLand-Nes": [
+    "Level1"
+  ],
+  "MarbleMadness-Genesis": [
+    "Level1"
+  ],
+  "MarbleMadness-Sms": [
+    "Level1"
+  ],
+  "MarioBros-Nes": [
+    "Phase1"
+  ],
+  "Marko-Genesis": [
+    "Level1"
+  ],
+  "Marsupilami-Genesis": [
+    "Level1"
+  ],
+  "MarvelLand-Genesis": [
+    "Level1"
+  ],
+  "Mask-Snes": [
+    "Level1"
+  ],
+  "MasterOfDarkness-Sms": [
+    "Level1"
+  ],
+  "McDonaldsTreasureLandAdventure-Genesis": [
+    "Level1"
+  ],
+  "MechanizedAttack-Nes": [
+    "Level1"
+  ],
+  "MegaMan-Nes": [
+    "Level1"
+  ],
+  "MegaMan2-Nes": [
+    "Normal.Flashman.Level1"
+  ],
+  "MegaManTheWilyWars-Genesis": [
+    "Level1.Swiv"
+  ],
+  "MegaSWIV-Genesis": [
+    "Level1"
+  ],
+  "MegaTurrican-Genesis": [
+    "Level1"
+  ],
+  "MendelPalace-Nes": [
+    "Level1.Round1"
+  ],
+  "MetalStorm-Nes": [
+    "Level1"
+  ],
+  "MichaelJacksonsMoonwalker-Genesis": [
+    "1Player.Level1"
+  ],
+  "MichaelJacksonsMoonwalker-Sms": [
+    "Level1"
+  ],
+  "MickeyMousecapade-Nes": [
+    "Level1",
+    "Level1.AfterYouCanShootThings"
+  ],
+  "MidnightResistance-Genesis": [
+    "Level1"
+  ],
+  "MightyBombJack-Nes": [
+    "Level1"
+  ],
+  "MightyFinalFight-Nes": [
+    "Cody.Slum.Level1"
+  ],
+  "MightyMorphinPowerRangers-Genesis": [
+    "1Player.Red.Level1"
+  ],
+  "MightyMorphinPowerRangersTheMovie-Genesis": [
+    "RedRanger.Level1"
+  ],
+  "MightyMorphinPowerRangersTheMovie-Snes": [
+    "1Player.Tommy.Level1"
+  ],
+  "Millipede-Nes": [
+    "1PlayerGameA.Level1"
+  ],
+  "MitsumeGaTooru-Nes": [
+    "Level1.Easy"
+  ],
+  "MoeroTwinBeeCinnamonHakaseOSukue-Nes": [
+    "Level1.1Player"
+  ],
+  "MonsterInMyPocket-Nes": [
+    "1Player.Vampire.Level1"
+  ],
+  "MonsterLair-Genesis": [
+    "Level1"
+  ],
+  "MonsterParty-Nes": [
+    "Level1"
+  ],
+  "MontezumaRevenge-Atari2600": [
+    "Start"
+  ],
+  "MortalKombat-Genesis": [
+    "Level1.KanoVsJohnnyCage"
+  ],
+  "MortalKombat3-Genesis": [
+    "Level1.ShangTsungVsLiuKang"
+  ],
+  "MortalKombatII-Genesis": [
+    "Level1.LiuKangVsJax"
+  ],
+  "MrNutz-Genesis": [
+    "Level1"
+  ],
+  "MrNutz-Snes": [
+    "WoodyLand.Level1"
+  ],
+  "MsPacMan-Genesis": [
+    "Level1"
+  ],
+  "MsPacMan-Nes": [
+    "1Player.Level1"
+  ],
+  "MsPacMan-Sms": [
+    "Level1"
+  ],
+  "MsPacman-Atari2600": [
+    "Start"
+  ],
+  "MutantVirusCrisisInAComputerWorld-Nes": [
+    "1Player.Level1"
+  ],
+  "MyHero-Sms": [
+    "Level1"
+  ],
+  "MysteryQuest-Nes": [
+    "Level1"
+  ],
+  "NARC-Nes": [
+    "Level1"
+  ],
+  "NameThisGame-Atari2600": [
+    "Start"
+  ],
+  "NewZealandStory-Genesis": [
+    "Level1"
+  ],
+  "NewZealandStory-Sms": [
+    "Level1"
+  ],
+  "Ninja-Sms": [
+    "Level1"
+  ],
+  "NinjaCrusaders-Nes": [
+    "Level1"
+  ],
+  "NinjaGaiden-Nes": [
+    "Level1"
+  ],
+  "NinjaGaiden-Sms": [
+    "Level1"
+  ],
+  "NinjaGaidenIIITheAncientShipOfDoom-Nes": [
+    "Level1"
+  ],
+  "NinjaGaidenIITheDarkSwordOfChaos-Nes": [
+    "Level1"
+  ],
+  "NinjaKid-Nes": [
+    "Level1"
+  ],
+  "NoahsArk-Nes": [
+    "Level1"
+  ],
+  "NormysBeachBabeORama-Genesis": [
+    "Level1"
+  ],
+  "OperationWolf-Nes": [
+    "Level1.CommunicationsCenter"
+  ],
+  "Ottifants-Genesis": [
+    "Level1"
+  ],
+  "Ottifants-Sms": [
+    "Level1"
+  ],
+  "OutToLunch-Snes": [
+    "Level1"
+  ],
+  "OverHorizon-Nes": [
+    "Level1"
+  ],
+  "POWPrisonersOfWar-Nes": [
+    "Level1"
+  ],
+  "PacInTime-Snes": [
+    "1Player.Level1"
+  ],
+  "PacManNamco-Nes": [
+    "Level1"
+  ],
+  "PacMania-Genesis": [
+    "Level1.BlockTown"
+  ],
+  "PacMania-Sms": [
+    "Level1.Blocktown"
+  ],
+  "PanicRestaurant-Nes": [
+    "Level1"
+  ],
+  "Paperboy-Genesis": [
+    "Level1.EasyStreet"
+  ],
+  "Paperboy-Nes": [
+    "Level1"
+  ],
+  "Paperboy-Sms": [
+    "Level1"
+  ],
+  "Paperboy2-Genesis": [
+    "Level1.EasyStreet"
+  ],
+  "Parodius-Nes": [
+    "1Player.PowerOption1.Auto.Easy"
+  ],
+  "Parodius-Snes": [
+    "1Player.VicViper.AutoPowerUp"
+  ],
+  "PeaceKeepers-Snes": [
+    "1Player.Flynn.Level1"
+  ],
+  "PenguinKunWars-Nes": [
+    "Level1"
+  ],
+  "Phalanx-Snes": [
+    "Level1"
+  ],
+  "Phelios-Genesis": [
+    "Novice.Chapter1"
+  ],
+  "Phoenix-Atari2600": [
+    "Start"
+  ],
+  "PinkGoesToHollywood-Genesis": [
+    "Level1"
+  ],
+  "PiratesOfDarkWater-Snes": [
+    "1Player.Ren.DragonsMaw"
+  ],
+  "PitFighter-Genesis": [
+    "Level1.BuzzVsTheExecutioner"
+  ],
+  "PitFighter-Sms": [
+    "Level1.Buzz"
+  ],
+  "Pitfall-Atari2600": [
+    "Start"
+  ],
+  "PitfallTheMayanAdventure-Genesis": [
+    "Level1"
+  ],
+  "PitfallTheMayanAdventure-Snes": [
+    "Level1"
+  ],
+  "PizzaPop-Nes": [
+    "Level1.1Player"
+  ],
+  "Plok-Snes": [
+    "Level1"
+  ],
+  "Pong-Atari2600": [
+    "Start",
+    "Start.2P"
+  ],
+  "Pooyan-Atari2600": [
+    "Start"
+  ],
+  "Pooyan-Nes": [
+    "1Player.Level1"
+  ],
+  "Popeye-Nes": [
+    "1Player.GameA.Level1"
+  ],
+  "PopnTwinBee-Snes": [
+    "1Player.Normal"
+  ],
+  "PopnTwinBeeRainbowBellAdventures-Snes": [
+    "1Player.TwinBee.Level1"
+  ],
+  "PorkyPigsHauntedHoliday-Snes": [
+    "Level1"
+  ],
+  "PoseidonWars3D-Sms": [
+    "Level1"
+  ],
+  "PowerAthlete-Genesis": [
+    "Level1.JoeVsWarren"
+  ],
+  "PowerPiggsOfTheDarkAge-Snes": [
+    "Level1"
+  ],
+  "PowerStrike-Sms": [
+    "Level1"
+  ],
+  "PowerStrikeII-Sms": [
+    "Type0.StageUp.Level1"
+  ],
+  "Predator2-Genesis": [
+    "Level1"
+  ],
+  "Predator2-Sms": [
+    "Level1"
+  ],
+  "PrehistorikMan-Snes": [
+    "Level1"
+  ],
+  "PrivateEye-Atari2600": [
+    "Start"
+  ],
+  "PsychicWorld-Sms": [
+    "Level1"
+  ],
+  "Pulseman-Genesis": [
+    "Level1",
+    "Level10",
+    "Level11",
+    "Level12",
+    "Level13",
+    "Level14",
+    "Level15",
+    "Level16",
+    "Level17",
+    "Level18",
+    "Level19",
+    "Level2",
+    "Level20",
+    "Level21",
+    "Level22",
+    "Level23",
+    "Level24",
+    "Level25",
+    "Level26",
+    "Level27",
+    "Level28",
+    "Level29",
+    "Level3",
+    "Level30",
+    "Level31",
+    "Level32",
+    "Level33",
+    "Level34",
+    "Level35",
+    "Level36",
+    "Level37",
+    "Level38",
+    "Level39",
+    "Level4",
+    "Level40",
+    "Level41",
+    "Level42",
+    "Level43",
+    "Level44",
+    "Level45",
+    "Level46",
+    "Level47",
+    "Level48",
+    "Level49",
+    "Level5",
+    "Level50",
+    "Level51",
+    "Level52",
+    "Level53",
+    "Level54",
+    "Level55",
+    "Level56",
+    "Level57",
+    "Level58",
+    "Level59",
+    "Level6",
+    "Level60",
+    "Level61",
+    "Level62",
+    "Level63",
+    "Level64",
+    "Level65",
+    "Level66",
+    "Level67",
+    "Level7",
+    "Level8",
+    "Level9"
+  ],
+  "Punisher-Genesis": [
+    "PunisherCharacter.Level1"
+  ],
+  "Punisher-Nes": [
+    "Level1.MiddleMissionSelect"
+  ],
+  "PussNBootsPerosGreatAdventure-Nes": [
+    "TheWest.Level1"
+  ],
+  "PuttySquad-Snes": [
+    "Level1.KingPhut"
+  ],
+  "QBert-Nes": [
+    "Level1"
+  ],
+  "Qbert-Atari2600": [
+    "Start"
+  ],
+  "QuackShot-Genesis": [
+    "Level1"
+  ],
+  "Quartet-Sms": [
+    "Level1"
+  ],
+  "Quarth-Nes": [
+    "1Player.Stage0.FirstPlayerOption"
+  ],
+  "RType-Sms": [
+    "Level1"
+  ],
+  "RTypeIII-Snes": [
+    "Level1.Type1"
+  ],
+  "RadicalRex-Genesis": [
+    "Level1"
+  ],
+  "RadicalRex-Snes": [
+    "Level1"
+  ],
+  "RaidenDensetsu-Snes": [
+    "Level1"
+  ],
+  "RaidenDensetsuRaidenTrad-Genesis": [
+    "Level1"
+  ],
+  "RainbowIslands-Nes": [
+    "Level1"
+  ],
+  "RainbowIslandsStoryOfTheBubbleBobble2-Sms": [
+    "Level1"
+  ],
+  "RamboFirstBloodPartII-Sms": [
+    "Level1"
+  ],
+  "RamboIII-Genesis": [
+    "Level1"
+  ],
+  "Rampage-Nes": [
+    "Level1"
+  ],
+  "RangerX-Genesis": [
+    "Level1"
+  ],
+  "RastanSagaII-Genesis": [
+    "Level1"
+  ],
+  "Realm-Snes": [
+    "Level1"
+  ],
+  "RenAndStimpyShowPresentsStimpysInvention-Genesis": [
+    "Level1"
+  ],
+  "RenAndStimpyShowVeediots-Snes": [
+    "Level1"
+  ],
+  "RenderingRangerR2-Snes": [
+    "Level1"
+  ],
+  "Renegade-Nes": [
+    "1Player.Level1"
+  ],
+  "Renegade-Sms": [
+    "1Player.Level1"
+  ],
+  "RevengeOfShinobi-Genesis": [
+    "District1Level1",
+    "District1Level2",
+    "District1Level3",
+    "District2Level1",
+    "District2Level2",
+    "District2Level3",
+    "District3Level1",
+    "District3Level2",
+    "District3Level3",
+    "District4Level1",
+    "District4Level2",
+    "District4Level3",
+    "District5Level1",
+    "District5Level2",
+    "District5Level3",
+    "District6Level1",
+    "District6Level2",
+    "District6Level3",
+    "District7Level1",
+    "District7Level2",
+    "District7Level3",
+    "District8Level1",
+    "District8Level2",
+    "District8Level3"
+  ],
+  "RiseOfTheRobots-Genesis": [
+    "Level1.CyborgVsLoader"
+  ],
+  "RiskyWoods-Genesis": [
+    "Level1"
+  ],
+  "Ristar-Genesis": [
+    "Level1.1",
+    "Level1.2",
+    "Level1.Boss",
+    "Level2.1",
+    "Level2.2",
+    "Level2.Boss",
+    "Level3.1",
+    "Level3.2",
+    "Level3.Boss",
+    "Level4.1",
+    "Level4.2",
+    "Level4.Boss",
+    "Level5.1",
+    "Level5.2",
+    "Level5.Boss",
+    "Level6.1",
+    "Level6.2",
+    "Level6.Boss",
+    "Level7.1",
+    "Level7.Boss"
+  ],
+  "RivalTurf-Snes": [
+    "1Player.JackFlak.Level1.PoliceStreet"
+  ],
+  "Riverraid-Atari2600": [
+    "Start"
+  ],
+  "RoadRunner-Atari2600": [
+    "Start"
+  ],
+  "RoadRunnersDeathValleyRally-Snes": [
+    "Level1"
+  ],
+  "RoboCop2-Nes": [
+    "Level1"
+  ],
+  "RoboCop3-Genesis": [
+    "Level1"
+  ],
+  "RoboCop3-Nes": [
+    "Level1"
+  ],
+  "RoboCop3-Sms": [
+    "Level1"
+  ],
+  "RoboCop3-Snes": [
+    "Level1"
+  ],
+  "RoboCopVersusTheTerminator-Sms": [
+    "Level1"
+  ],
+  "RoboCopVersusTheTerminator-Snes": [
+    "Level1"
+  ],
+  "RoboWarrior-Nes": [
+    "Level1"
+  ],
+  "RoboccoWars-Nes": [
+    "Level1"
+  ],
+  "Robotank-Atari2600": [
+    "Start"
+  ],
+  "RocketKnightAdventures-Genesis": [
+    "Level1",
+    "Level2",
+    "Level3",
+    "Level4",
+    "Level5",
+    "Level6",
+    "Level7"
+  ],
+  "RockinKats-Nes": [
+    "1Player.Channel1.DowntownStreets"
+  ],
+  "Rollerball-Nes": [
+    "Level1.1Player"
+  ],
+  "Rollergames-Nes": [
+    "TBirds.Level1"
+  ],
+  "RollingThunder2-Genesis": [
+    "Level1.MaleCharacter"
+  ],
+  "RunSaber-Snes": [
+    "1Player.Level1.TajBase"
+  ],
+  "RunningBattle-Sms": [
+    "Level1"
+  ],
+  "RushnAttack-Nes": [
+    "1Player.Level1"
+  ],
+  "SCATSpecialCyberneticAttackTeam-Nes": [
+    "1Player.Level1"
+  ],
+  "SDHeroSoukessenTaoseAkuNoGundan-Nes": [
+    "Level1.FlyPerson"
+  ],
+  "Sagaia-Genesis": [
+    "Stage1"
+  ],
+  "Sagaia-Sms": [
+    "Level1"
+  ],
+  "SaintSword-Genesis": [
+    "Level1"
+  ],
+  "SameSameSame-Genesis": [
+    "Level1"
+  ],
+  "SamuraiShodown-Genesis": [
+    "Level1.HaohmaruVsHaohmaru"
+  ],
+  "Sansuu5And6NenKeisanGame-Nes": [
+    "Option1.Option1.Option1"
+  ],
+  "Satellite7-Sms": [
+    "Level1"
+  ],
+  "Seaquest-Atari2600": [
+    "Start"
+  ],
+  "SecondSamurai-Genesis": [
+    "1Player.Level1"
+  ],
+  "SectionZ-Nes": [
+    "Level1"
+  ],
+  "Seicross-Nes": [
+    "Level1"
+  ],
+  "SeikimaIIAkumaNoGyakushuu-Nes": [
+    "Level1"
+  ],
+  "SenjouNoOokamiIIMercs-Genesis": [
+    "ArcadeMode.Level1"
+  ],
+  "ShadowDancerTheSecretOfShinobi-Genesis": [
+    "Level1"
+  ],
+  "ShadowOfTheBeast-Genesis": [
+    "Level1"
+  ],
+  "ShaqFu-Genesis": [
+    "Level1.ShaqVsLavaMonster"
+  ],
+  "Shatterhand-Nes": [
+    "Level1"
+  ],
+  "Shinobi-Sms": [
+    "Level1"
+  ],
+  "ShinobiIIIReturnOfTheNinjaMaster-Genesis": [
+    "Level1",
+    "Level2",
+    "Level3",
+    "Level4",
+    "Level5",
+    "Level6",
+    "Level7"
+  ],
+  "SilverSurfer-Nes": [
+    "BottomCenterCharacter.Level1"
+  ],
+  "SimpsonsBartVsTheSpaceMutants-Genesis": [
+    "Level1"
+  ],
+  "SimpsonsBartVsTheSpaceMutants-Nes": [
+    "Level1"
+  ],
+  "SimpsonsBartVsTheWorld-Nes": [
+    "1Player.China.Level1"
+  ],
+  "SimpsonsBartmanMeetsRadioactiveMan-Nes": [
+    "Level1"
+  ],
+  "SkeletonKrew-Genesis": [
+    "1Player.Level1.Spine"
+  ],
+  "Skiing-Atari2600": [
+    "Start"
+  ],
+  "SkuljaggerRevoltOfTheWesticans-Snes": [
+    "Level1"
+  ],
+  "SkyDestroyer-Nes": [
+    "1Player.Level1"
+  ],
+  "SkyKid-Nes": [
+    "1Player.Level1"
+  ],
+  "SkyShark-Nes": [
+    "Level1"
+  ],
+  "SmartBall-Snes": [
+    "Level1"
+  ],
+  "SmashTV-Nes": [
+    "Level1.1Player"
+  ],
+  "Smurfs-Genesis": [
+    "Level1"
+  ],
+  "Smurfs-Nes": [
+    "Level1"
+  ],
+  "Smurfs-Snes": [
+    "Level1"
+  ],
+  "SnakeRattleNRoll-Nes": [
+    "Level1"
+  ],
+  "SnowBrothers-Nes": [
+    "1Player.Level1"
+  ],
+  "Socket-Genesis": [
+    "Level1"
+  ],
+  "SolDeace-Genesis": [
+    "Level1"
+  ],
+  "Solaris-Atari2600": [
+    "Start"
+  ],
+  "SoldiersOfFortune-Genesis": [
+    "1Player.BrigandAndMercenary.Level1"
+  ],
+  "SonSon-Nes": [
+    "Level1"
+  ],
+  "SonicAndKnuckles-Genesis": [
+    "Level1"
+  ],
+  "SonicAndKnuckles3-Genesis": [
+    "AngelIslandZone.Act1",
+    "AngelIslandZone.Act2",
+    "CarnivalNightZone.Act1",
+    "CarnivalNightZone.Act2",
+    "DeathEggZone.Act1",
+    "DeathEggZone.Act2",
+    "FlyingBatteryZone.Act1",
+    "FlyingBatteryZone.Act2",
+    "HiddenPalaceZone",
+    "HydrocityZone.Act1",
+    "HydrocityZone.Act2",
+    "IcecapZone.Act1",
+    "IcecapZone.Act2",
+    "LaunchBaseZone.Act1",
+    "LaunchBaseZone.Act2",
+    "LavaReefZone.Act1",
+    "LavaReefZone.Act2",
+    "MarbleGardenZone.Act1",
+    "MarbleGardenZone.Act2",
+    "MushroomHillZone.Act1",
+    "MushroomHillZone.Act2",
+    "SandopolisZone.Act1",
+    "SandopolisZone.Act2"
+  ],
+  "SonicBlast-Sms": [
+    "Level1"
+  ],
+  "SonicBlastMan-Snes": [
+    "Level1"
+  ],
+  "SonicBlastManII-Snes": [
+    "1Player.SonicBlastMan.Level1"
+  ],
+  "SonicTheHedgehog-Genesis": [
+    "GreenHillZone.Act1",
+    "GreenHillZone.Act2",
+    "GreenHillZone.Act3",
+    "LabyrinthZone.Act1",
+    "LabyrinthZone.Act2",
+    "LabyrinthZone.Act3",
+    "MarbleZone.Act1",
+    "MarbleZone.Act2",
+    "MarbleZone.Act3",
+    "ScrapBrainZone.Act1",
+    "ScrapBrainZone.Act2",
+    "SpringYardZone.Act1",
+    "SpringYardZone.Act2",
+    "SpringYardZone.Act3",
+    "StarLightZone.Act1",
+    "StarLightZone.Act2",
+    "StarLightZone.Act3"
+  ],
+  "SonicTheHedgehog-Sms": [
+    "Level1"
+  ],
+  "SonicTheHedgehog2-Genesis": [
+    "AquaticRuinZone.Act1",
+    "AquaticRuinZone.Act2",
+    "CasinoNightZone.Act1",
+    "CasinoNightZone.Act2",
+    "ChemicalPlantZone.Act1",
+    "ChemicalPlantZone.Act2",
+    "EmeraldHillZone.Act1",
+    "EmeraldHillZone.Act2",
+    "HillTopZone.Act1",
+    "HillTopZone.Act2",
+    "MetropolisZone.Act1",
+    "MetropolisZone.Act2",
+    "MetropolisZone.Act3",
+    "MysticCaveZone.Act1",
+    "MysticCaveZone.Act2",
+    "OilOceanZone.Act1",
+    "OilOceanZone.Act2",
+    "WingFortressZone"
+  ],
+  "SonicTheHedgehog2-Sms": [
+    "Level1"
+  ],
+  "SonicTheHedgehog3-Genesis": [
+    "Level1"
+  ],
+  "SonicTheHedgehogRandomLevels-Genesis": [
+    "Start"
+  ],
+  "SonicWings-Snes": [
+    "1Player.America.Keaton"
+  ],
+  "SpaceHarrier-Nes": [
+    "Level1"
+  ],
+  "SpaceHarrier-Sms": [
+    "Level1"
+  ],
+  "SpaceHarrier3D-Sms": [
+    "Level1"
+  ],
+  "SpaceHarrierII-Genesis": [
+    "Level1"
+  ],
+  "SpaceInvaders-Atari2600": [
+    "Start"
+  ],
+  "SpaceInvaders-Nes": [
+    "1Player.Level1"
+  ],
+  "SpaceInvaders-Snes": [
+    "1Player.ClassicMode.UprightCabinet"
+  ],
+  "SpaceInvaders91-Genesis": [
+    "Level1"
+  ],
+  "SpaceMegaforce-Snes": [
+    "Level1"
+  ],
+  "SpankysQuest-Snes": [
+    "Level1"
+  ],
+  "Sparkster-Genesis": [
+    "Level1"
+  ],
+  "Sparkster-Snes": [
+    "Level1"
+  ],
+  "SpartanX2-Nes": [
+    "Level1.Easy"
+  ],
+  "SpeedyGonzalesLosGatosBandidos-Snes": [
+    "Level1"
+  ],
+  "Spelunker-Nes": [
+    "Level1"
+  ],
+  "SpiderManReturnOfTheSinisterSix-Sms": [
+    "Level1"
+  ],
+  "Splatterhouse2-Genesis": [
+    "Level1"
+  ],
+  "SpotGoesToHollywood-Genesis": [
+    "Level1"
+  ],
+  "SprigganPowered-Snes": [
+    "Level1"
+  ],
+  "SpyHunter-Nes": [
+    "Level1"
+  ],
+  "Sqoon-Nes": [
+    "Level1"
+  ],
+  "StarForce-Nes": [
+    "Level1"
+  ],
+  "StarFox-Snes": [
+    "ControlA.MidRoute.Corneria"
+  ],
+  "StarGunner-Atari2600": [
+    "Start"
+  ],
+  "StarSoldier-Nes": [
+    "1Player.Level1"
+  ],
+  "StarWars-Nes": [
+    "Level1"
+  ],
+  "StarshipHector-Nes": [
+    "Normal.Level1"
+  ],
+  "SteelEmpire-Genesis": [
+    "Stage1.Striker"
+  ],
+  "SteelTalons-Genesis": [
+    "Level1"
+  ],
+  "Stinger-Nes": [
+    "1Player.Level1"
+  ],
+  "StoneProtectors-Snes": [
+    "Cornelius.Level1"
+  ],
+  "Stormlord-Genesis": [
+    "Level1"
+  ],
+  "StreetFighterIISpecialChampionEdition-Genesis": [
+    "Champion.Level1.RyuVsGuile"
+  ],
+  "StreetSmart-Genesis": [
+    "Level1"
+  ],
+  "StreetsOfRage-Genesis": [
+    "1Player.Adam.Round1",
+    "1Player.Adam.Round2",
+    "1Player.Adam.Round3",
+    "1Player.Adam.Round4",
+    "1Player.Adam.Round5",
+    "1Player.Adam.Round6",
+    "1Player.Adam.Round7",
+    "1Player.Adam.Round8"
+  ],
+  "StreetsOfRage2-Genesis": [
+    "1Player.Axel.Level1",
+    "1Player.Axel.Level2",
+    "1Player.Axel.Level3",
+    "1Player.Axel.Level4",
+    "1Player.Axel.Level5",
+    "1Player.Axel.Level6",
+    "1Player.Axel.Level7",
+    "1Player.Axel.Level8"
+  ],
+  "StreetsOfRage3-Genesis": [
+    "1Player.Axel.Stage1",
+    "1Player.Axel.Stage2",
+    "1Player.Axel.Stage3",
+    "1Player.Axel.Stage4",
+    "1Player.Axel.Stage5",
+    "1Player.Axel.Stage6",
+    "1Player.Axel.Stage7A"
+  ],
+  "StreetsOfRageII-Sms": [
+    "Axel.Stage1"
+  ],
+  "Strider-Genesis": [
+    "Level1"
+  ],
+  "SubTerrania-Genesis": [
+    "Level1"
+  ],
+  "SubmarineAttack-Sms": [
+    "Level1"
+  ],
+  "SunsetRiders-Genesis": [
+    "1Player.Billy.Level1"
+  ],
+  "SuperAdventureIsland-Snes": [
+    "Level1"
+  ],
+  "SuperAlfredChicken-Snes": [
+    "Level1"
+  ],
+  "SuperArabian-Nes": [
+    "Level1.1Player"
+  ],
+  "SuperBCKid-Snes": [
+    "Level1"
+  ],
+  "SuperC-Nes": [
+    "Level1"
+  ],
+  "SuperCastlevaniaIV-Snes": [
+    "Start"
+  ],
+  "SuperDoubleDragon-Snes": [
+    "1Player.Level1"
+  ],
+  "SuperFantasyZone-Genesis": [
+    "Level1"
+  ],
+  "SuperGhoulsnGhosts-Snes": [
+    "Level1"
+  ],
+  "SuperJamesPond-Snes": [
+    "Level1"
+  ],
+  "SuperMarioBros-Nes": [
+    "Level1-1",
+    "Level2-1",
+    "Level3-1",
+    "Level4-1",
+    "Level5-1",
+    "Level6-1",
+    "Level7-1",
+    "Level8-1"
+  ],
+  "SuperMarioBros3-Nes": [
+    "1Player.World1.Level1"
+  ],
+  "SuperMarioWorld-Snes": [
+    "Bridges1",
+    "Bridges2",
+    "ChocolateIsland1",
+    "ChocolateIsland2",
+    "ChocolateIsland3",
+    "DonutPlains1",
+    "DonutPlains2",
+    "DonutPlains3",
+    "DonutPlains4",
+    "DonutPlains5",
+    "Forest1",
+    "Forest2",
+    "Forest3",
+    "Forest4",
+    "Forest5",
+    "Start",
+    "VanillaDome1",
+    "VanillaDome2",
+    "VanillaDome3",
+    "VanillaDome4",
+    "VanillaDome5",
+    "YoshiIsland1",
+    "YoshiIsland2",
+    "YoshiIsland3",
+    "YoshiIsland4"
+  ],
+  "SuperMarioWorld2-Snes": [
+    "Start"
+  ],
+  "SuperPitfall-Nes": [
+    "Level1"
+  ],
+  "SuperRType-Snes": [
+    "Level1.Easy"
+  ],
+  "SuperSWIV-Snes": [
+    "Level1"
+  ],
+  "SuperSmashTV-Genesis": [
+    "Arena1"
+  ],
+  "SuperSmashTV-Snes": [
+    "Arena1"
+  ],
+  "SuperSpaceInvaders-Sms": [
+    "1Player.BottomLeftLevel"
+  ],
+  "SuperStarForce-Nes": [
+    "Level1"
+  ],
+  "SuperStarWars-Snes": [
+    "Level1"
+  ],
+  "SuperStarWarsReturnOfTheJedi-Snes": [
+    "Level1"
+  ],
+  "SuperStarWarsTheEmpireStrikesBack-Snes": [
+    "Level1"
+  ],
+  "SuperStrikeGunner-Snes": [
+    "Level1.PlasmaShield"
+  ],
+  "SuperThunderBlade-Genesis": [
+    "Level1"
+  ],
+  "SuperTrollIslands-Snes": [
+    "Level1"
+  ],
+  "SuperTurrican-Snes": [
+    "Level1"
+  ],
+  "SuperTurrican2-Snes": [
+    "Level1"
+  ],
+  "SuperValisIV-Snes": [
+    "NormalDifficulty.Level1"
+  ],
+  "SuperWidget-Snes": [
+    "Level1"
+  ],
+  "SuperWonderBoy-Sms": [
+    "Level1"
+  ],
+  "SuperXeviousGumpNoNazo-Nes": [
+    "Level1"
+  ],
+  "Superman-Genesis": [
+    "Level1"
+  ],
+  "SupermanTheManOfSteel-Sms": [
+    "Level1"
+  ],
+  "SwampThing-Nes": [
+    "Level1"
+  ],
+  "SwordOfSodan-Genesis": [
+    "DefaultSettings.Level1"
+  ],
+  "SydOfValis-Genesis": [
+    "Level1"
+  ],
+  "SylvesterAndTweetyInCageyCapers-Genesis": [
+    "Level1"
+  ],
+  "T2TheArcadeGame-Genesis": [
+    "Level1.Joypad"
+  ],
+  "T2TheArcadeGame-Sms": [
+    "Level1"
+  ],
+  "TaiyouNoYuushaFighbird-Nes": [
+    "LeftPlayerOption.Level1.TopMachineOption"
+  ],
+  "TakahashiMeijinNoBugutteHoney-Nes": [
+    "Level1"
+  ],
+  "TargetEarth-Genesis": [
+    "Level1.AfterWeaponSelect"
+  ],
+  "TargetRenegade-Nes": [
+    "Level1"
+  ],
+  "TaskForceHarrierEX-Genesis": [
+    "Easy.Stage1"
+  ],
+  "TazMania-Genesis": [
+    "Level1"
+  ],
+  "TazMania-Sms": [
+    "Level1"
+  ],
+  "TazMania-Snes": [
+    "Level1"
+  ],
+  "TeenageMutantNinjaTurtles-Nes": [
+    "Level1"
+  ],
+  "TeenageMutantNinjaTurtlesIIITheManhattanProject-Nes": [
+    "1Player.Leo.Level1"
+  ],
+  "TeenageMutantNinjaTurtlesIITheArcadeGame-Nes": [
+    "1Player.Leo.Level1"
+  ],
+  "TeenageMutantNinjaTurtlesIVTurtlesInTime-Snes": [
+    "1Player.Leonardo.Level1"
+  ],
+  "TeenageMutantNinjaTurtlesTheHyperstoneHeist-Genesis": [
+    "1Player.Leo.Level1"
+  ],
+  "TeenageMutantNinjaTurtlesTournamentFighters-Genesis": [
+    "Leonardo.BioPlanet.Level1"
+  ],
+  "TeenageMutantNinjaTurtlesTournamentFighters-Nes": [
+    "Level1.LeoVsRaph.Tournament"
+  ],
+  "Tennis-Atari2600": [
+    "Start"
+  ],
+  "Terminator-Genesis": [
+    "Level1"
+  ],
+  "Terminator-Sms": [
+    "Level1"
+  ],
+  "Terminator2JudgmentDay-Nes": [
+    "Level1"
+  ],
+  "TerraCresta-Nes": [
+    "1Player.Level1"
+  ],
+  "TetrastarTheFighter-Nes": [
+    "Level1"
+  ],
+  "TetrisAttack-Snes": [
+    "1Player.Level1.Player1.Easy.EndlessMode",
+    "1Player.Level1.Player2.Easy.EndlessMode",
+    "1Player.Level1.Player3.Easy.EndlessMode",
+    "1Player.Level1.Player4.Easy.EndlessMode",
+    "1Player.Level1.Player5.Easy.EndlessMode",
+    "1Player.Level1.Player6.Easy.EndlessMode"
+  ],
+  "TetsuwanAtom-Nes": [
+    "Level1"
+  ],
+  "Thexder-Nes": [
+    "Level1"
+  ],
+  "ThunderAndLightning-Nes": [
+    "Level1"
+  ],
+  "ThunderBlade-Sms": [
+    "Level1"
+  ],
+  "ThunderForceII-Genesis": [
+    "Level1"
+  ],
+  "ThunderForceIII-Genesis": [
+    "StageHydra"
+  ],
+  "ThunderForceIV-Genesis": [
+    "1stAttackRuin.2ndAttackDaser.3rdAttackAirRaid.4thAttackStrike"
+  ],
+  "ThunderFox-Genesis": [
+    "Thunder.Level1"
+  ],
+  "ThunderSpirits-Snes": [
+    "Level1"
+  ],
+  "Thundercade-Nes": [
+    "Level1"
+  ],
+  "Tick-Genesis": [
+    "Level1"
+  ],
+  "Tick-Snes": [
+    "Level1"
+  ],
+  "TigerHeli-Nes": [
+    "Level1"
+  ],
+  "TimePilot-Atari2600": [
+    "Start"
+  ],
+  "TimeZone-Nes": [
+    "Level1"
+  ],
+  "TinHead-Genesis": [
+    "Level1"
+  ],
+  "TinyToonAdventures-Nes": [
+    "Level1.Duck"
+  ],
+  "TinyToonAdventuresBusterBustsLoose-Snes": [
+    "Level1"
+  ],
+  "TinyToonAdventuresBustersHiddenTreasure-Genesis": [
+    "Level1"
+  ],
+  "Toki-Nes": [
+    "1Player.Level1"
+  ],
+  "TomAndJerry-Snes": [
+    "Level1"
+  ],
+  "TotalRecall-Nes": [
+    "Level1"
+  ],
+  "TotallyRad-Nes": [
+    "Level1"
+  ],
+  "ToxicCrusaders-Genesis": [
+    "DefaultSettings.Level1"
+  ],
+  "ToxicCrusaders-Nes": [
+    "Level1.Tromaville"
+  ],
+  "TrampolineTerror-Genesis": [
+    "Level1"
+  ],
+  "TransBot-Sms": [
+    "Level1"
+  ],
+  "TreasureMaster-Nes": [
+    "Level1"
+  ],
+  "Trog-Nes": [
+    "Island1"
+  ],
+  "Trojan-Nes": [
+    "1Player.Level1"
+  ],
+  "TrollsInCrazyland-Nes": [
+    "Level1"
+  ],
+  "TroubleShooter-Genesis": [
+    "Level1.AvalancheEngine"
+  ],
+  "Truxton-Genesis": [
+    "Level1.Easy"
+  ],
+  "Turrican-Genesis": [
+    "Level1"
+  ],
+  "Tutankham-Atari2600": [
+    "Start"
+  ],
+  "TwinBee-Nes": [
+    "1Player.Level1"
+  ],
+  "TwinBee3PokoPokoDaimaou-Nes": [
+    "FirstMenuOption.Level1"
+  ],
+  "TwinCobra-Nes": [
+    "Level1"
+  ],
+  "TwinCobraDesertAttackHelicopter-Genesis": [
+    "EasyA.Level1"
+  ],
+  "TwinEagle-Nes": [
+    "1Player.Level1"
+  ],
+  "TwinkleTale-Genesis": [
+    "Level1"
+  ],
+  "TwoCrudeDudes-Genesis": [
+    "1Player.DefaultSettings.Level1"
+  ],
+  "UNSquadron-Snes": [
+    "1Player.ShinKazama.F83.TopLeftWeapon.Level1"
+  ],
+  "UchuuNoKishiTekkamanBlade-Snes": [
+    "1Player.Level1"
+  ],
+  "UndeadLine-Genesis": [
+    "Forest.Level1"
+  ],
+  "UniversalSoldier-Genesis": [
+    "Level1"
+  ],
+  "Untouchables-Nes": [
+    "Level1"
+  ],
+  "UpNDown-Atari2600": [
+    "Start"
+  ],
+  "UrbanChampion-Nes": [
+    "GameA.Level1"
+  ],
+  "UruseiYatsuraLumNoWeddingBell-Nes": [
+    "Level1"
+  ],
+  "UzuKeobukseon-Genesis": [
+    "Level1"
+  ],
+  "VRTroopers-Genesis": [
+    "JBVsTankotron.Level1"
+  ],
+  "VaporTrail-Genesis": [
+    "1Player.SilphFighter.Level1"
+  ],
+  "Vectorman-Genesis": [
+    "Level1",
+    "Level10",
+    "Level11",
+    "Level12",
+    "Level13",
+    "Level14",
+    "Level15",
+    "Level16",
+    "Level2",
+    "Level3",
+    "Level4",
+    "Level5",
+    "Level6",
+    "Level7",
+    "Level8",
+    "Level9"
+  ],
+  "Vectorman2-Genesis": [
+    "Level1",
+    "Level10",
+    "Level11",
+    "Level12",
+    "Level13",
+    "Level14",
+    "Level15",
+    "Level16",
+    "Level17",
+    "Level18",
+    "Level19",
+    "Level2",
+    "Level20",
+    "Level21",
+    "Level22",
+    "Level3",
+    "Level4",
+    "Level5",
+    "Level6",
+    "Level7",
+    "Level8",
+    "Level9"
+  ],
+  "Venture-Atari2600": [
+    "Start"
+  ],
+  "ViceProjectDoom-Nes": [
+    "Level1"
+  ],
+  "VideoPinball-Atari2600": [
+    "Start"
+  ],
+  "Viewpoint-Genesis": [
+    "1Player.Level1"
+  ],
+  "Vigilante-Sms": [
+    "Level1"
+  ],
+  "VolguardII-Nes": [
+    "Level1"
+  ],
+  "WaniWaniWorld-Genesis": [
+    "Level1"
+  ],
+  "Wardner-Genesis": [
+    "Level1"
+  ],
+  "Warpman-Nes": [
+    "Level1"
+  ],
+  "WaynesWorld-Nes": [
+    "Level1"
+  ],
+  "WereBackADinosaursStory-Snes": [
+    "Level1"
+  ],
+  "WhipRush-Genesis": [
+    "Stage1"
+  ],
+  "Widget-Nes": [
+    "Level1"
+  ],
+  "WizardOfWor-Atari2600": [
+    "Start"
+  ],
+  "WizardsAndWarriors-Nes": [
+    "Level1"
+  ],
+  "WiznLiz-Genesis": [
+    "Level1"
+  ],
+  "Wolfchild-Genesis": [
+    "Level1"
+  ],
+  "Wolfchild-Sms": [
+    "Level1"
+  ],
+  "Wolfchild-Snes": [
+    "Level1"
+  ],
+  "WolverineAdamantiumRage-Genesis": [
+    "Level1"
+  ],
+  "WonderBoyInMonsterWorld-Sms": [
+    "Level1"
+  ],
+  "WorldHeroes-Genesis": [
+    "Level1.Normal.HanzouVsJanna"
+  ],
+  "WrathOfTheBlackManta-Nes": [
+    "Level1"
+  ],
+  "WreckingCrew-Nes": [
+    "Level1"
+  ],
+  "XDRXDazedlyRay-Genesis": [
+    "Round1"
+  ],
+  "XKaliber2097-Snes": [
+    "Level1"
+  ],
+  "XMenMojoWorld-Sms": [
+    "Level1"
+  ],
+  "Xenon2Megablast-Genesis": [
+    "1Player.Easy.Level1"
+  ],
+  "Xenophobe-Nes": [
+    "Level1.DuckCharacter"
+  ],
+  "XeviousTheAvenger-Nes": [
+    "1Player.Level1"
+  ],
+  "Xexyz-Nes": [
+    "Level1"
+  ],
+  "YarsRevenge-Atari2600": [
+    "Start"
+  ],
+  "YoukaiClub-Nes": [
+    "Level1"
+  ],
+  "YoukaiDouchuuki-Nes": [
+    "Level1"
+  ],
+  "YoungIndianaJonesChronicles-Nes": [
+    "Level1"
+  ],
+  "Zanac-Nes": [
+    "Level1"
+  ],
+  "Zaxxon-Atari2600": [
+    "Start"
+  ],
+  "ZeroTheKamikazeSquirrel-Genesis": [
+    "Level1"
+  ],
+  "ZeroTheKamikazeSquirrel-Snes": [
+    "Level1"
+  ],
+  "ZeroWing-Genesis": [
+    "Level1-1.Easy",
+    "Level1-1.Hard",
+    "Level1-2.Easy",
+    "Level1-2.Hard",
+    "Level1-3.Easy",
+    "Level1-3.Hard",
+    "Level1-4.Easy",
+    "Level1-4.Hard",
+    "Level1-5.Easy",
+    "Level1-5.Hard",
+    "Level1-6.Easy",
+    "Level1-6.Hard",
+    "Level1-7.Easy",
+    "Level1-7.Hard",
+    "Level1-8.Easy",
+    "Level1-8.Hard"
+  ],
+  "ZombiesAteMyNeighbors-Snes": [
+    "Start"
+  ],
+  "ZoolNinjaOfTheNthDimension-Genesis": [
+    "Level1"
+  ],
+  "ZoolNinjaOfTheNthDimension-Sms": [
+    "Level1"
+  ],
+  "ZoolNinjaOfTheNthDimension-Snes": [
+    "Level1"
+  ]
+}
