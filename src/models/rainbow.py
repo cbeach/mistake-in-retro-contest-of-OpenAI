@@ -1,4 +1,7 @@
-# coding: utf8
+#!/usr/bin/env python
+
+import os
+from os import environ, path
 import tensorflow as tf
 import numpy as np
 import math
@@ -7,6 +10,7 @@ from functools import partial
 import time
 import sys
 sys.path.append("..")
+import progressbar
 
 from rollouts import SumTree, Memory
 from .base import TFQNetwork
@@ -257,7 +261,9 @@ class DQN:
               tf_schedules=(),
               handle_ep=lambda steps, rew: None,
               timeout=None,
-              save_iters=1024):
+              save_iters=1024,
+              game='SonicTheHedgehog-Genesis',
+              state='LabyrinthZone.Act2'):
         """
         Run an automated training loop.
 
@@ -290,10 +296,16 @@ class DQN:
         next_target_update = target_interval
         next_train_step = train_interval
         start_time = time.time()
-        while steps_taken < num_steps:
-            if timeout is not None and time.time() - start_time > timeout:
+        then = start_time
+        for i in progressbar.progressbar(range(num_steps), redirect_stdout=True):
+            now = time.time()
+            if timeout is not None and now - start_time > timeout:
                 return
             transitions = player.play()
+
+            if now - then >= 1:
+                then = now
+
             for trans in transitions:
                 if trans['is_last']:
                     handle_ep(trans['episode_step'] + 1, trans['total_reward'])
@@ -307,13 +319,15 @@ class DQN:
                     _, losses = sess.run((optimize_op, self.losses),
                                          feed_dict=self.feed_dict(batch))
                     replay_buffer.update_weights(batch, losses)
-                    '''loss = tf.reduce_mean(losses)
-                    loss_value = loss.eval()
-                    print('learn steps ' + str(steps_taken) + ' : loss is: ' + str(loss_value))
-                    del loss_value
+                    #loss = tf.reduce_mean(losses)
+                    #loss_value = loss.eval()
+                    #print('learn steps ' + str(steps_taken) + ' : loss is: ' + str(loss_value))
+                    #del loss_value
                     if steps_taken % save_iters == 0:
-                        print('save model')
-                        self.saver.save(sess=sess, save_path='./model/Sonic', global_step=steps_taken)'''
+                        base_data_dir = environ.get('DATA_DIR', environ.get('HOME', '.'))
+                        models_dir = path.join(base_data_dir, 'models/{}/{}'.format(game, state))
+                        saved_modle_path = self.saver.save(sess=sess, save_path=models_dir, global_step=steps_taken)
+                        print('model saved as: {}'.format(saved_model_path))
                 if steps_taken >= next_target_update:
                     next_target_update = steps_taken + target_interval
                     sess.run(self.update_target)

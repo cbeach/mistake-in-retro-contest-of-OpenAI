@@ -1,6 +1,11 @@
 import gym
 import numpy as np
+import os
+from os import environ, path
+import sys
 
+
+import retro
 from .atari_wrappers import FrameStack, WarpFrame
 from retro_contest.local import make
 from gym import spaces
@@ -25,12 +30,24 @@ state3 = ['LavaReefZone.Act2', 'CarnivalNightZone.Act2', 'CarnivalNightZone.Act1
           'HiddenPalaceZone', 'HydrocityZone.Act2', 'IcecapZone.Act1', 'IcecapZone.Act2', 'AngelIslandZone.Act1',
           'LaunchBaseZone.Act2', 'LaunchBaseZone.Act1']'''
 
-def make_env(stack=True, scale_rew=True):
+def list_envs():
+    return {game: retro.data.list_states(game) 
+            for game in retro.data.list_games()}
+
+def make_env(stack=True, 
+        scale_rew=True, 
+        game='SonicTheHedgehog-Genesis', 
+        state='LabyrinthZone.Act2'):
     """
     Create an environment with some standard wrappers.
     """
     #env = grc.RemoteEnv('tmp/sock') #contest env
-    env = make(game='SonicTheHedgehog-Genesis', state='LabyrinthZone.Act2')
+    base_data_dir = environ.get('DATA_DIR', environ.get('HOME', '.'))
+    replay_dir = path.join(base_data_dir, 'replays/{}/{}/'.format(game, state))
+    if not path.isdir(replay_dir):
+        os.makedirs(replay_dir)
+    print('replay_dir: {}'.format(replay_dir))
+    env = make(game=game, state=state, record=replay_dir)
     env = SonicDiscretizer(env)
     if scale_rew:
         env = RewardScaler(env)
