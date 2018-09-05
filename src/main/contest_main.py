@@ -4,15 +4,29 @@ import argparse
 import tensorflow as tf
 import json
 import sys
+import os
+from os import path
 sys.path.append('..')
 
 from rollouts import PrioritizedReplayBuffer, NStepPlayer, BatchedPlayer
 from envs import BatchedFrameStack, BatchedGymEnv
-from utils import AllowBacktracking, make_env, list_envs
+from utils import AllowBacktracking, make_env, list_envs, get_models_dir
 from models import DQN, rainbow_models
 from spaces import gym_space_vectorizer
 
 import gym_remote.exceptions as gre
+
+def get_newest_model(game, state):
+    models_dir = get_models_dir(game, state)
+    checkpoints = []
+    for i in os.listdir(models_dir):
+        bn = path.basename(i).split('.')[0]
+        try:
+            checkpoints.append(int(bn.split('-')[-1]))
+        except ValueError as e:
+            pass
+
+    return max(checkpoints) if len(checkpoints) > 0 else None
 
 
 def main():
@@ -20,10 +34,12 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--game', help='game: Use retro.data.list_games() to see a list of available games', type=str, default="SuperMarioBros-Nes")
     parser.add_argument('--state', help='game state: Use retro.data.list_states(game) to see a list of available starting states', type=str, default="Level1-1")
-    parser.add_argument('--num_steps', help='The number of steps to train the model', default=3000000, type=int)
+    parser.add_argument('--num-steps', help='The number of steps to train the model.', default=3000000, type=int)
+    parser.add_argument('--resume_training', help='Resume training the most recent model', default=True, type=bool)
     args = parser.parse_args()
     game = args.game
     state = args.state
+    resume = args.resume_training
 
     env = AllowBacktracking(make_env(stack=False, scale_rew=False, game=game, state=state))
     env = BatchedFrameStack(BatchedGymEnv([[env]]), num_images=4, concat=False)
@@ -36,9 +52,19 @@ def main():
                                   min_val=-200,
                                   max_val=200))
         player = NStepPlayer(BatchedPlayer(env, dqn.online_net), 4)
+        model_number = get_newest_model(game, state)
+        if resume and model_number is not None:
+
+            models_dir = path.join(get_models_dir(game, state), '{}-{}'.format(state, model_number))
+            saver = tf.train.Saver()
+            saver.restore(sess, models_dir)
+        else:
+            model_number = 0
         optim, optimize = dqn.optimize(learning_rate=0.0001)
         sess.run(tf.global_variables_initializer())
+
         dqn.train(num_steps=args.num_steps, # Make sure an exception arrives before we stop.
+                  initial_step=model_number,
                   player=player,
                   replay_buffer=PrioritizedReplayBuffer(500000, 0.5, 0.4, epsilon=0.1),
                   optimize_op=optimize,

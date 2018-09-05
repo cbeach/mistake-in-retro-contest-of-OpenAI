@@ -31,6 +31,17 @@ state3 = ['LavaReefZone.Act2', 'CarnivalNightZone.Act2', 'CarnivalNightZone.Act1
           'HiddenPalaceZone', 'HydrocityZone.Act2', 'IcecapZone.Act1', 'IcecapZone.Act2', 'AngelIslandZone.Act1',
           'LaunchBaseZone.Act2', 'LaunchBaseZone.Act1']'''
 
+
+def get_models_dir(game, state):
+    base_data_dir = environ.get('DATA_DIR', environ.get('HOME', '.'))
+    return path.join(base_data_dir, 'models/{}/'.format(game, state))
+
+
+def get_replay_dir(game, state):
+    base_data_dir = environ.get('DATA_DIR', environ.get('HOME', '.'))
+    return path.join(base_data_dir, 'replays/{}/{}/'.format(game, state))
+
+
 def list_envs():
     return {game: retro.data.list_states(game) 
             for game in retro.data.list_games()}
@@ -45,11 +56,11 @@ def make_env(stack=True,
     #env = grc.RemoteEnv('tmp/sock') #contest env
     platform = game.split('-')[1].lower()
     print('platform: {}'.format(platform))
-    base_data_dir = environ.get('DATA_DIR', environ.get('HOME', '.'))
-    replay_dir = path.join(base_data_dir, 'replays/{}/{}/'.format(game, state))
+
+    replay_dir = get_replay_dir(game, state)
     if not path.isdir(replay_dir):
         os.makedirs(replay_dir)
-    print('replay_dir: {}'.format(replay_dir))
+
     env = make(game=game, state=state, record=replay_dir)
     if game == "SuperMarioBros-Nes":
         env = MarioDiscretizer(env, platform)

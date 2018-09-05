@@ -14,7 +14,7 @@ import progressbar
 
 from rollouts import SumTree, Memory
 from .base import TFQNetwork
-from utils import take_vector_elems
+from utils import take_vector_elems, get_models_dir
 from .BaseNet import nature_cnn, noisy_net_dense, sample_noise, nature_cnn_add_one_layer, my_net
 
 class DistQNetwork(TFQNetwork):
@@ -250,8 +250,7 @@ class DQN:
         return optim, optim.minimize(self.loss)
 
     def save_model(self, sess, steps_taken, game, state):
-        base_data_dir = environ.get('DATA_DIR', environ.get('HOME', '.'))
-        models_dir = path.join(base_data_dir, 'models/{}/{}'.format(game, state))
+        models_dir = path.join(get_models_dir(game, state), state)
         saved_model_path = self.saver.save(sess=sess, save_path=models_dir, global_step=steps_taken)
         print('model saved as: {}'.format(saved_model_path))
 
@@ -260,6 +259,7 @@ class DQN:
               player,
               replay_buffer,
               optimize_op,
+              initial_step=0,
               train_interval=1,
               target_interval=8192,
               batch_size=32,
@@ -309,12 +309,12 @@ class DQN:
 
         sess = self.online_net.session
         sess.run(self.update_target)
-        steps_taken = 0
+        steps_taken = initial_step
         next_target_update = target_interval
         next_train_step = train_interval
         start_time = time.time()
         then = start_time
-        for i in progressbar.progressbar(range(num_steps), redirect_stdout=True):
+        for i in progressbar.progressbar(range(initial_step, num_steps), redirect_stdout=True):
             now = time.time()
             if timeout is not None and now - start_time > timeout:
                 return
@@ -324,21 +324,21 @@ class DQN:
             transitions = player.play()
 
             if now - then >= 1:
-                print('env.data.lookup_value("lives"): {}'.format(env.data.lookup_value("lives")))
+                #print('env.data.lookup_value("lives"): {}'.format(env.data.lookup_value("lives")))
                 then = now
 
-            print('rewards: {}'.format(transitions[-1]['rewards']))
-            print('info: {}'.format(transitions[-1]['info']))
-            print('episode_id: {}'.format(transitions[-1]['episode_id']))
-            print('episode_step: {}'.format(transitions[-1]['episode_step']))
-            print('end_time: {}'.format(transitions[-1]['end_time']))
-            print('is_last: {}'.format(transitions[-1]['is_last']))
-            print('total_reward: {}'.format(transitions[-1]['total_reward']))
-            print('\n\n')
+            #print('rewards: {}'.format(transitions[-1]['rewards']))
+            #print('info: {}'.format(transitions[-1]['info']))
+            #print('episode_id: {}'.format(transitions[-1]['episode_id']))
+            #print('episode_step: {}'.format(transitions[-1]['episode_step']))
+            #print('end_time: {}'.format(transitions[-1]['end_time']))
+            #print('is_last: {}'.format(transitions[-1]['is_last']))
+            #print('total_reward: {}'.format(transitions[-1]['total_reward']))
+            #print('\n\n')
+
             for trans in transitions:
                 if trans['is_last']:
                     temp = handle_ep(trans['episode_step'] + 1, trans['total_reward'])
-                    print(trans['episode_step'] + 1, trans['total_reward'])
                 replay_buffer.add_sample(trans)
                 steps_taken += 1
                 for sched in tf_schedules:
