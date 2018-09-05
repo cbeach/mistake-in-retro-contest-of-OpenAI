@@ -249,6 +249,12 @@ class DQN:
         optim = tf.train.AdamOptimizer(learning_rate=learning_rate, epsilon=epsilon, **adam_kwargs)
         return optim, optim.minimize(self.loss)
 
+    def save_model(self, sess, steps_taken, game, state):
+        base_data_dir = environ.get('DATA_DIR', environ.get('HOME', '.'))
+        models_dir = path.join(base_data_dir, 'models/{}/{}'.format(game, state))
+        saved_model_path = self.saver.save(sess=sess, save_path=models_dir, global_step=steps_taken)
+        print('model saved as: {}'.format(saved_model_path))
+
     def train(self,
               num_steps,
               player,
@@ -290,6 +296,17 @@ class DQN:
           timeout: if set, this is a number of seconds
             after which the training loop should exit.
         """
+        #Seriously?!??
+        env = player.player.batched_env.env.envs[0][0].env.env.env.env.env
+        em = player.player.batched_env.env.envs[0][0].env.env.env.env.env.em
+        print('em: {}'.format(dir(em)))
+        print('env: {}'.format(dir(env)))
+        print('env.metadata: {}'.format(env.metadata))
+        print('env.data: {}'.format(env.data))
+        print('env.data: {}'.format(dir(env.data)))
+        print('env.data.list_variables(): {}'.format(env.data.list_variables()))
+        print('env.data.lookup_value("lives"): {}'.format(env.data.lookup_value("lives")))
+
         sess = self.online_net.session
         sess.run(self.update_target)
         steps_taken = 0
@@ -301,14 +318,27 @@ class DQN:
             now = time.time()
             if timeout is not None and now - start_time > timeout:
                 return
+
+            #screen = em.get_screen()
+            #print(type(screen), screen.shape)
             transitions = player.play()
 
             if now - then >= 1:
+                print('env.data.lookup_value("lives"): {}'.format(env.data.lookup_value("lives")))
                 then = now
 
+            print('rewards: {}'.format(transitions[-1]['rewards']))
+            print('info: {}'.format(transitions[-1]['info']))
+            print('episode_id: {}'.format(transitions[-1]['episode_id']))
+            print('episode_step: {}'.format(transitions[-1]['episode_step']))
+            print('end_time: {}'.format(transitions[-1]['end_time']))
+            print('is_last: {}'.format(transitions[-1]['is_last']))
+            print('total_reward: {}'.format(transitions[-1]['total_reward']))
+            print('\n\n')
             for trans in transitions:
                 if trans['is_last']:
-                    handle_ep(trans['episode_step'] + 1, trans['total_reward'])
+                    temp = handle_ep(trans['episode_step'] + 1, trans['total_reward'])
+                    print(trans['episode_step'] + 1, trans['total_reward'])
                 replay_buffer.add_sample(trans)
                 steps_taken += 1
                 for sched in tf_schedules:
@@ -324,13 +354,11 @@ class DQN:
                     #print('learn steps ' + str(steps_taken) + ' : loss is: ' + str(loss_value))
                     #del loss_value
                     if steps_taken % save_iters == 0:
-                        base_data_dir = environ.get('DATA_DIR', environ.get('HOME', '.'))
-                        models_dir = path.join(base_data_dir, 'models/{}/{}'.format(game, state))
-                        saved_modle_path = self.saver.save(sess=sess, save_path=models_dir, global_step=steps_taken)
-                        print('model saved as: {}'.format(saved_model_path))
+                        self.save_model(sess, steps_taken, game, state)
                 if steps_taken >= next_target_update:
                     next_target_update = steps_taken + target_interval
                     sess.run(self.update_target)
+        self.save_model(sess, steps_taken, game, state)
 
     def _discounted_rewards(self, rews):
         res = 0

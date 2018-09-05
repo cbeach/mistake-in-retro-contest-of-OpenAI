@@ -3,6 +3,7 @@ import numpy as np
 import os
 from os import environ, path
 import sys
+from itertools import combinations
 
 
 import retro
@@ -42,13 +43,18 @@ def make_env(stack=True,
     Create an environment with some standard wrappers.
     """
     #env = grc.RemoteEnv('tmp/sock') #contest env
+    platform = game.split('-')[1].lower()
+    print('platform: {}'.format(platform))
     base_data_dir = environ.get('DATA_DIR', environ.get('HOME', '.'))
     replay_dir = path.join(base_data_dir, 'replays/{}/{}/'.format(game, state))
     if not path.isdir(replay_dir):
         os.makedirs(replay_dir)
     print('replay_dir: {}'.format(replay_dir))
     env = make(game=game, state=state, record=replay_dir)
-    env = SonicDiscretizer(env)
+    if game == "SuperMarioBros-Nes":
+        env = MarioDiscretizer(env, platform)
+    else:
+        env = PlatformDiscretizer(env, platform)
     if scale_rew:
         env = RewardScaler(env)
     env = WarpFrame(env)
@@ -56,6 +62,82 @@ def make_env(stack=True,
         env = FrameStack(env, 4)
     return env
 
+class MarioDiscretizer(gym.ActionWrapper):
+    """
+    Wrap a gym-retro environment and make it use discrete
+    actions for the Sonic game.
+    """
+    def __init__(self, env, platform):
+        super(MarioDiscretizer, self).__init__(env)
+        print("MarioDiscretizer")
+
+        buttons = ['B', None, 'SELECT', 'START', 'UP', 'DOWN', 'LEFT', 'RIGHT', 'A']
+        actions = [('B', 'A', 'DOWN', 'LEFT'),
+                   ('B', 'A', 'DOWN', 'RIGHT'),
+                   ('B', 'A', 'UP'),
+                   ('B', 'A', 'DOWN'),
+                   ('B', 'A', 'LEFT'),
+                   ('B', 'A', 'RIGHT'),
+                   ('B', 'DOWN', 'LEFT'),
+                   ('B', 'DOWN', 'RIGHT'),
+                   ('A', 'DOWN', 'LEFT'),
+                   ('A', 'DOWN', 'RIGHT'),
+                   ('B', 'A'),
+                   ('B', 'UP'),
+                   ('B', 'DOWN'),
+                   ('B', 'LEFT'),
+                   ('B', 'RIGHT'),
+                   ('A', 'UP'),
+                   ('A', 'DOWN'),
+                   ('A', 'LEFT'),
+                   ('A', 'RIGHT'),
+                   ('B',),
+                   ('A',),
+                   ('UP',),
+                   ('DOWN',),
+                   ('LEFT',),
+                   ('RIGHT',)]
+
+        self._actions = []
+        for action in actions:
+            arr = np.array([False] * len(buttons))
+            for button in action:
+                arr[buttons.index(button)] = True
+            self._actions.append(arr)
+        self.action_space = gym.spaces.Discrete(len(self._actions))
+
+    def action(self, a): # pylint: disable=W0221
+        return self._actions[a].copy()
+class PlatformDiscretizer(gym.ActionWrapper):
+    """
+    Wrap a gym-retro environment and make it use discrete
+    actions for the Sonic game.
+    """
+    def __init__(self, env, platform):
+        super(PlatformDiscretizer, self).__init__(env)
+
+        if platform == 'genesis':
+            buttons = ["B", "A", "MODE", "START", "UP", "DOWN", "LEFT", "RIGHT", "C", "Y", "X", "Z"]
+            actions = [['LEFT'], ['RIGHT'], ['LEFT', 'DOWN'], ['RIGHT', 'DOWN'], ['DOWN'],
+                       ['DOWN', 'B'], ['B']]
+        elif platform == 'nes':
+            buttons = ["B", "A", "SELECT", "START", "UP", "DOWN", "LEFT", "RIGHT"]
+            actions = combinations(["B", "A", "UP", "DOWN", "LEFT", "RIGHT"])
+        elif platform == 'snes':
+            buttons = ["B", "A", "SELECT", "START", "UP", "DOWN", "LEFT", "RIGHT"]
+            actions = [['LEFT'], ['RIGHT'], ['LEFT', 'DOWN'], ['RIGHT', 'DOWN'], ['DOWN'],
+                       ['DOWN', 'B'], ['B']]
+
+        self._actions = []
+        for action in actions:
+            arr = np.array([False] * len(buttons))
+            for button in action:
+                arr[buttons.index(button)] = True
+            self._actions.append(arr)
+        self.action_space = gym.spaces.Discrete(len(self._actions))
+
+    def action(self, a): # pylint: disable=W0221
+        return self._actions[a].copy()
 class SonicDiscretizer(gym.ActionWrapper):
     """
     Wrap a gym-retro environment and make it use discrete

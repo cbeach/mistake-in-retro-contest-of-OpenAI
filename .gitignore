@@ -1,4 +1,5 @@
 *.sw[mnop]
+*.pyc
 *.py[cod]
 *.so
 *.egg
