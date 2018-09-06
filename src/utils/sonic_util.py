@@ -4,11 +4,11 @@ import os
 from os import environ, path
 import sys
 from itertools import combinations
+import retro_contest
 
 
 import retro
-from .atari_wrappers import FrameStack, WarpFrame
-from retro_contest.local import make
+from .atari_wrappers import FrameStack, WarpFrame, GameOverAwareWrapper
 from gym import spaces
 #import gym_remote.client as grc
 
@@ -46,6 +46,21 @@ def list_envs():
     return {game: retro.data.list_states(game) 
             for game in retro.data.list_games()}
 
+def retro_make(game, state=retro.State.DEFAULT, discrete_actions=False, bk2dir=None, record='.'):
+    use_restricted_actions = retro.Actions.FILTERED
+    if discrete_actions:
+        use_restricted_actions = retro.Actions.DISCRETE
+    try:
+        env = retro.make(game, state, scenario='contest', record=record, use_restricted_actions=use_restricted_actions)
+    except Exception:
+        env = retro.make(game, state, use_restricted_actions=use_restricted_actions)
+    if bk2dir:
+        env.auto_record(bk2dir)
+    env = retro_contest.StochasticFrameSkip(env, n=4, stickprob=0.25)
+    env = GameOverAwareWrapper(env)
+    return env
+
+
 def make_env(stack=True, 
         scale_rew=True, 
         game='SonicTheHedgehog-Genesis', 
@@ -61,7 +76,7 @@ def make_env(stack=True,
     if not path.isdir(replay_dir):
         os.makedirs(replay_dir)
 
-    env = make(game=game, state=state, record=replay_dir)
+    env = retro_make(game=game, state=state, record=replay_dir)
     if game == "SuperMarioBros-Nes":
         env = MarioDiscretizer(env, platform)
     else:

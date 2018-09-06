@@ -16,6 +16,12 @@ from spaces import gym_space_vectorizer
 
 import gym_remote.exceptions as gre
 
+def handle_ep(steps, reward):
+    with open('./rewards', 'w') as fp:
+        rewards = json.load(fp)
+        fp.seek(0)
+        rewards.append({'steps': steps, 'reward': reward})
+
 def get_newest_model(game, state):
     models_dir = get_models_dir(game, state)
     checkpoints = []
@@ -54,10 +60,10 @@ def main():
         player = NStepPlayer(BatchedPlayer(env, dqn.online_net), 4)
         model_number = get_newest_model(game, state)
         if resume and model_number is not None:
-
-            models_dir = path.join(get_models_dir(game, state), '{}-{}'.format(state, model_number))
+            model_name = path.join(get_models_dir(game, state), '{}-{}'.format(state, model_number))
             saver = tf.train.Saver()
-            saver.restore(sess, models_dir)
+            saver.restore(sess, model_name)
+            print('loaded model {}'.format(model_name))
         else:
             model_number = 0
         optim, optimize = dqn.optimize(learning_rate=0.0001)

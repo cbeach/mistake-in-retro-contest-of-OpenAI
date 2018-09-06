@@ -320,21 +320,10 @@ class DQN:
                 return
 
             #screen = em.get_screen()
-            #print(type(screen), screen.shape)
             transitions = player.play()
 
             if now - then >= 1:
-                #print('env.data.lookup_value("lives"): {}'.format(env.data.lookup_value("lives")))
                 then = now
-
-            #print('rewards: {}'.format(transitions[-1]['rewards']))
-            #print('info: {}'.format(transitions[-1]['info']))
-            #print('episode_id: {}'.format(transitions[-1]['episode_id']))
-            #print('episode_step: {}'.format(transitions[-1]['episode_step']))
-            #print('end_time: {}'.format(transitions[-1]['end_time']))
-            #print('is_last: {}'.format(transitions[-1]['is_last']))
-            #print('total_reward: {}'.format(transitions[-1]['total_reward']))
-            #print('\n\n')
 
             for trans in transitions:
                 if trans['is_last']:
@@ -349,10 +338,6 @@ class DQN:
                     _, losses = sess.run((optimize_op, self.losses),
                                          feed_dict=self.feed_dict(batch))
                     replay_buffer.update_weights(batch, losses)
-                    #loss = tf.reduce_mean(losses)
-                    #loss_value = loss.eval()
-                    #print('learn steps ' + str(steps_taken) + ' : loss is: ' + str(loss_value))
-                    #del loss_value
                     if steps_taken % save_iters == 0:
                         self.save_model(sess, steps_taken, game, state)
                 if steps_taken >= next_target_update:

@@ -1,9 +1,34 @@
+import time
 import numpy as np
 from collections import deque
 import gym
-from gym import spaces
+from gym import spaces, Wrapper
 import cv2
 cv2.ocl.setUseOpenCL(False)
+
+class GameOverAwareWrapper(Wrapper):
+    def __init__(self, env):
+        super(GameOverAwareWrapper, self).__init__(env)    
+        self.info = {}
+        self.reward = 0
+        self.episode_number = 0
+
+    def step(self, action):
+        observation, reward, done, info = self.env.step(action)
+        self.reward = info['score']
+        self.info = info
+
+        if info.get('lives', 0) < 0:
+            if self.metadata.get('semantics.autoreset'):
+                _ = self.reset() # automatically reset the env
+            done = True 
+
+        return observation, reward, done, info
+
+    def reset(self):
+        print('End of Episode {} - reward: {}'.format(self.episode_number, self.reward))
+        self.episode_number += 1
+        return self.env.reset()
 
 class NoopResetEnv(gym.Wrapper):
     def __init__(self, env, noop_max=30):
