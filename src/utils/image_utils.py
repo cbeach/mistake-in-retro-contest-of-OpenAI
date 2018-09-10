@@ -35,19 +35,22 @@ class Panorama:
         T[0:2, 0:2] = np.array(((1, 0), (0, 1)))
         x_trans = int(T[1][2]) 
         y_trans = int(T[0][2]) 
+        print('x_trans: {}'.format(x_trans))
+        print('y_trans: {}'.format(y_trans))
+
         if x_trans < 0 and y_trans < 0:
             bx_start  = abs(x_trans)
             by_start  = abs(y_trans)
-            imageA = np.pad(imageA, ((0, imageB.shape[0] + abs(x_trans) - imageA.shape[0]), (0, imageB.shape[1] + abs(y_trans) - imageA.shape[1]), (0, 0)), 'constant')
+            imageA = np.pad(imageA, ((0, abs(imageB.shape[0] + abs(x_trans) - imageA.shape[0])), (0, abs(imageB.shape[1] + abs(y_trans) - imageA.shape[1])), (0, 0)), 'constant')
             #imageA = np.pad(imageA, ((0, imageB.shape[0] + abs(x_trans)), (0, imageB.shape[1] + abs(y_trans)), (0, 0)), 'constant')
         elif x_trans < 0 and y_trans >= 0:
-            bx_start  = 0
-            by_start  = y_trans
-            imageA = np.pad(imageA, ((0, abs(x_trans)), (y_trans, 0), (0, 0)), 'constant')
-        elif x_trans >= 0 and y_trans < 0:
-            bx_start  = x_trans
+            bx_start  = abs(x_trans)
             by_start  = 0
-            imageA = np.pad(imageA, ((x_trans, 0), (0, abs(y_trans)), (0, 0)), 'constant')
+            imageA = np.pad(imageA, ((0, abs(imageB.shape[0] + abs(x_trans) - imageA.shape[0])), (y_trans, 0), (0, 0)), 'constant')
+        elif x_trans >= 0 and y_trans < 0:
+            bx_start  = 0
+            by_start  = abs(y_trans)
+            imageA = np.pad(imageA, ((x_trans, 0), (0, abs(imageB.shape[1] + abs(y_trans) - imageA.shape[1])), (0, 0)), 'constant')
         elif x_trans >= 0 and y_trans >= 0:
             bx_start  = 0
             by_start  = 0
