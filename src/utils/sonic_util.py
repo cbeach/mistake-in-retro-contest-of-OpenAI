@@ -33,12 +33,12 @@ state3 = ['LavaReefZone.Act2', 'CarnivalNightZone.Act2', 'CarnivalNightZone.Act1
 
 
 def get_models_dir(game, state):
-    base_data_dir = environ.get('DATA_DIR', environ.get('HOME', '.'))
+    base_data_dir = path.join(environ.get('DATA_DIR', environ.get('HOME', '.')), 'game_playing')
     return path.join(base_data_dir, 'models/{}/'.format(game, state))
 
 
 def get_replay_dir(game, state):
-    base_data_dir = environ.get('DATA_DIR', environ.get('HOME', '.'))
+    base_data_dir = path.join(environ.get('DATA_DIR', environ.get('HOME', '.')), 'game_playing')
     return path.join(base_data_dir, 'replays/{}/{}/'.format(game, state))
 
 

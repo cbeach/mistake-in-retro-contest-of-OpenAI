@@ -117,6 +117,8 @@ class BatchedPlayer(Player):
         self._next_episode_id = batched_env.num_envs
         self._total_rewards = [[0.0] * batched_env.num_envs_per_sub_batches
                                for _ in range(batched_env.num_sub_batches)]
+        self.deep_env = self.batched_env.env.envs[0][0].env.env.env.env.env
+        self.emu =  self.batched_env.env.envs[0][0].env.env.env.env.env.em
 
     def play(self):
         if self._cur_states is None:
@@ -146,6 +148,7 @@ class BatchedPlayer(Player):
                 'episode_step': self._episode_steps[sub_batch][i],
                 'end_time': end_time,
                 'is_last': done,
+                'screen': self.emu.get_screen(),
                 'total_reward': self._total_rewards[sub_batch][i]
             })
             if done:

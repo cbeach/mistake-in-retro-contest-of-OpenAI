@@ -42,6 +42,9 @@ def main():
     parser.add_argument('--state', help='game state: Use retro.data.list_states(game) to see a list of available starting states', type=str, default="Level1-1")
     parser.add_argument('--num-steps', help='The number of steps to train the model.', default=3000000, type=int)
     parser.add_argument('--resume_training', help='Resume training the most recent model', default=True, type=bool)
+    parser.add_argument('--show_gameplay', help='Display the agent playing the game in realtime', default=False, type=bool)
+    parser.add_argument('--show_map', help='Show the level map panorama as it is generated', default=False, type=bool)
+    parser.add_argument('--show_map_matches', help='Show the keypoint matches in the level map. Implies --show_map=True', default=False, type=bool)
     args = parser.parse_args()
     game = args.game
     state = args.state
@@ -67,7 +70,11 @@ def main():
         else:
             model_number = 0
         optim, optimize = dqn.optimize(learning_rate=0.0001)
-        sess.run(tf.global_variables_initializer())
+
+        if resume and model_number is not None:
+            sess.run(tf.variables_initializer(optim.variables()))
+        else:
+            sess.run(tf.global_variables_initializer())
 
         dqn.train(num_steps=args.num_steps, # Make sure an exception arrives before we stop.
                   initial_step=model_number,
@@ -80,7 +87,10 @@ def main():
                   min_buffer_size=20000,
                   save_iters=2048,
                   game=game,
-                  state=state)
+                  state=state,
+                  show_gameplay=args.show_gameplay,
+                  show_map=args.show_map,
+                  show_map_matches=args.show_map_matches)
 
 if __name__ == '__main__':
     try:

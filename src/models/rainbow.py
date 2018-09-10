@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import cv2
 import os
 from os import environ, path
 import tensorflow as tf
@@ -14,7 +15,7 @@ import progressbar
 
 from rollouts import SumTree, Memory
 from .base import TFQNetwork
-from utils import take_vector_elems, get_models_dir
+from utils import take_vector_elems, get_models_dir, Stitcher
 from .BaseNet import nature_cnn, noisy_net_dense, sample_noise, nature_cnn_add_one_layer, my_net
 
 class DistQNetwork(TFQNetwork):
@@ -268,8 +269,11 @@ class DQN:
               handle_ep=lambda steps, rew: None,
               timeout=None,
               save_iters=1024,
-              game='SonicTheHedgehog-Genesis',
-              state='LabyrinthZone.Act2'):
+              game="SuperMarioBros-Nes",
+              state="Level1-1",
+              show_gameplay=False,
+              show_map=False,
+              show_map_matches=False):
         """
         Run an automated training loop.
 
@@ -298,8 +302,8 @@ class DQN:
         """
         #Seriously?!??
         env = player.player.batched_env.env.envs[0][0].env.env.env.env.env
-        em = player.player.batched_env.env.envs[0][0].env.env.env.env.env.em
-        print('em: {}'.format(dir(em)))
+        emu = player.player.batched_env.env.envs[0][0].env.env.env.env.env.em
+        print('emu: {}'.format(dir(emu)))
         print('env: {}'.format(dir(env)))
         print('env.metadata: {}'.format(env.metadata))
         print('env.data: {}'.format(env.data))
@@ -314,6 +318,8 @@ class DQN:
         next_train_step = train_interval
         start_time = time.time()
         then = start_time
+        stitched = None
+        stitcher = Stitcher()
         for i in progressbar.progressbar(range(initial_step, num_steps), redirect_stdout=True):
             now = time.time()
             if timeout is not None and now - start_time > timeout:
@@ -325,9 +331,29 @@ class DQN:
             if now - then >= 1:
                 then = now
 
+            if stitched is None:
+                stitched = transitions[0]['screen']
+
             for trans in transitions:
+                print('i: ' + str(i - initial_step))
+                
+                if show_map_matches:
+                    result, vis = stitcher.stitch([stitched, trans['screen']], showMatches=True) 
+                    cv2.imshow('map', result)
+                    cv2.imshow('matches', vis)
+                    cv2.waitKey(1)
+                elif show_map and not show_map_matches:
+                    result = stitcher.stitch([stitched, trans['screen']]) 
+                    cv2.imshow('map', stitched)
+                    cv2.waitKey(1)
+
+                if show_gameplay:
+                    cv2.imshow('gameplay', trans['screen'])
+                    cv2.waitKey(1)
+
                 if trans['is_last']:
                     temp = handle_ep(trans['episode_step'] + 1, trans['total_reward'])
+
                 replay_buffer.add_sample(trans)
                 steps_taken += 1
                 for sched in tf_schedules:
