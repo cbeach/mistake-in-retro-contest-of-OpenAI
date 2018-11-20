@@ -118,7 +118,8 @@ class BatchedPlayer(Player):
         self._total_rewards = [[0.0] * batched_env.num_envs_per_sub_batches
                                for _ in range(batched_env.num_sub_batches)]
         self.deep_env = self.batched_env.env.envs[0][0].env.env.env.env.env
-        self.emu =  self.batched_env.env.envs[0][0].env.env.env.env.env.em
+        self.emu =  self.batched_env.env.envs[0][0].env.env.env.env.env.env.em
+        self.last_score = 0
 
     def play(self):
         if self._cur_states is None:
@@ -136,6 +137,12 @@ class BatchedPlayer(Player):
         end_time = time.time()
         transitions = []
         for i, (obs, rew, done, info) in enumerate(zip(*outs)):
+            if info['score'] > self.last_score:
+                rew = info['score'] - self.last_score
+                self.last_score = info['score']
+                print('rew: {}'.format(rew))
+            if done:
+                self.last_score = 0
             self._total_rewards[sub_batch][i] += rew
             transitions.append({
                 'obs': self._last_obses[sub_batch][i],

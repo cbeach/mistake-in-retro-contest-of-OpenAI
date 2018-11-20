@@ -15,7 +15,7 @@ class GameOverAwareWrapper(Wrapper):
 
     def step(self, action):
         observation, reward, done, info = self.env.step(action)
-        self.reward = info['score']
+        #self.reward = info['score']
         self.info = info
 
         if info.get('lives', 0) < 0:
@@ -26,7 +26,7 @@ class GameOverAwareWrapper(Wrapper):
         return observation, reward, done, info
 
     def reset(self):
-        print('End of Episode {} - reward: {}'.format(self.episode_number, self.reward))
+        print('End of Episode {} - reward: {}, score: {}'.format(self.episode_number, self.reward, self.info.get('score', 0)))
         self.episode_number += 1
         return self.env.reset()
 

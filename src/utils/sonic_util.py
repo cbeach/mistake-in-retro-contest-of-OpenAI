@@ -1,3 +1,4 @@
+import traceback
 import gym
 import numpy as np
 import os
@@ -31,6 +32,10 @@ state3 = ['LavaReefZone.Act2', 'CarnivalNightZone.Act2', 'CarnivalNightZone.Act1
           'HiddenPalaceZone', 'HydrocityZone.Act2', 'IcecapZone.Act1', 'IcecapZone.Act2', 'AngelIslandZone.Act1',
           'LaunchBaseZone.Act2', 'LaunchBaseZone.Act1']'''
 
+game_wrappers = {
+    'SuperMarioBros': GameOverAwareWrapper,
+}
+
 
 def get_models_dir(game, state):
     base_data_dir = path.join(environ.get('DATA_DIR', environ.get('HOME', '.')), 'game_playing')
@@ -43,7 +48,7 @@ def get_replay_dir(game, state):
 
 
 def list_envs():
-    return {game: retro.data.list_states(game) 
+    return {game: retro.data.list_states(game)
             for game in retro.data.list_games()}
 
 def retro_make(game, state=retro.State.DEFAULT, discrete_actions=False, bk2dir=None, record='.'):
@@ -51,19 +56,25 @@ def retro_make(game, state=retro.State.DEFAULT, discrete_actions=False, bk2dir=N
     if discrete_actions:
         use_restricted_actions = retro.Actions.DISCRETE
     try:
-        env = retro.make(game, state, scenario='contest', record=record, use_restricted_actions=use_restricted_actions)
-    except Exception:
+        env = retro.make(game, state, scenario='deep_thought', record=record, use_restricted_actions=use_restricted_actions)
+    except Exception as e:
+        print('EXCEPTION in retro_make')
+        print(traceback.format_exc())
         env = retro.make(game, state, use_restricted_actions=use_restricted_actions)
     if bk2dir:
         env.auto_record(bk2dir)
     env = retro_contest.StochasticFrameSkip(env, n=4, stickprob=0.25)
-    env = GameOverAwareWrapper(env)
+    if game in game_wrappers:
+        env = game_wrappers[game](env)
+    else:
+        env = gym.wrappers.TimeLimit(env, max_episode_steps=4500)
+
     return env
 
 
-def make_env(stack=True, 
-        scale_rew=True, 
-        game='SonicTheHedgehog-Genesis', 
+def make_env(stack=True,
+        scale_rew=True,
+        game='SonicTheHedgehog-Genesis',
         state='LabyrinthZone.Act2'):
     """
     Create an environment with some standard wrappers.
@@ -79,6 +90,7 @@ def make_env(stack=True,
     env = retro_make(game=game, state=state, record=replay_dir)
     if game == "SuperMarioBros-Nes":
         env = MarioDiscretizer(env, platform)
+        env = GameOverAwareWrapper(env)
     else:
         env = PlatformDiscretizer(env, platform)
     if scale_rew:
@@ -131,6 +143,8 @@ class MarioDiscretizer(gym.ActionWrapper):
                 arr[buttons.index(button)] = True
             self._actions.append(arr)
         self.action_space = gym.spaces.Discrete(len(self._actions))
+        print('self.action_space')
+        print(self.action_space)
 
     def action(self, a): # pylint: disable=W0221
         return self._actions[a].copy()

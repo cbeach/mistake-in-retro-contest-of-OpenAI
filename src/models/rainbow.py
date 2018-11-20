@@ -15,7 +15,7 @@ import progressbar
 
 from rollouts import SumTree, Memory
 from .base import TFQNetwork
-from utils import take_vector_elems, get_models_dir, Stitcher
+from utils import take_vector_elems, get_models_dir, Panorama
 from .BaseNet import nature_cnn, noisy_net_dense, sample_noise, nature_cnn_add_one_layer, my_net
 
 class DistQNetwork(TFQNetwork):
@@ -271,6 +271,7 @@ class DQN:
               save_iters=1024,
               game="SuperMarioBros-Nes",
               state="Level1-1",
+              generate_map=False,
               show_gameplay=False,
               show_map=False,
               show_map_matches=False):
@@ -301,8 +302,8 @@ class DQN:
             after which the training loop should exit.
         """
         #Seriously?!??
-        env = player.player.batched_env.env.envs[0][0].env.env.env.env.env
-        emu = player.player.batched_env.env.envs[0][0].env.env.env.env.env.em
+        env = player.player.batched_env.env.envs[0][0].env.env.env.env.env.env
+        emu = player.player.batched_env.env.envs[0][0].env.env.env.env.env.env.em
         print('emu: {}'.format(dir(emu)))
         print('env: {}'.format(dir(env)))
         print('env.metadata: {}'.format(env.metadata))
@@ -319,33 +320,47 @@ class DQN:
         start_time = time.time()
         then = start_time
         stitched = None
-        stitcher = Stitcher()
+        stitcher = Panorama()
+        #print(player.player.batched_env)
+        #print(player.player.batched_env.env)
+        print(player.player.batched_env.env.envs)
+        #print(player.player.batched_env.env.envs[0])
+        #print(player.player.batched_env.env.envs[0][0])
+        #print(player.player.batched_env.env.envs[0][0].env)
+        #print(player.player.batched_env.env.envs[0][0].env.env)
+        #print(player.player.batched_env.env.envs[0][0].env.env.env)
+        #print(player.player.batched_env.env.envs[0][0].env.env.env.env)
+        import inspect
+        print(inspect.getfile(player.player.batched_env.env.envs[0][0].env.env.env.env.env.env.__class__))
+        #sys.exit(0)
         for i in progressbar.progressbar(range(initial_step, num_steps), redirect_stdout=True):
             now = time.time()
             if timeout is not None and now - start_time > timeout:
                 return
 
-            #screen = em.get_screen()
             transitions = player.play()
+            #print(transitions[-1]['rewards'])
 
             if now - then >= 1:
                 then = now
 
-            if stitched is None:
-                stitched = transitions[0]['screen']
+            if show_map_matches or generate_map or show_map_matches:
+                if stitched is None:
+                    stitched = transitions[0]['screen']
 
             for trans in transitions:
-                print('i: ' + str(i - initial_step))
-                
-                if show_map_matches:
+                #print(trans.keys())
+                if show_map_matches and generate_map:
                     result, vis = stitcher.stitch([stitched, trans['screen']], showMatches=True) 
                     cv2.imshow('map', result)
                     cv2.imshow('matches', vis)
                     cv2.waitKey(1)
-                elif show_map and not show_map_matches:
+                elif show_map and generate_map and not show_map_matches:
                     result = stitcher.stitch([stitched, trans['screen']]) 
                     cv2.imshow('map', stitched)
                     cv2.waitKey(1)
+                elif generate_map:
+                    result = stitcher.stitch([stitched, trans['screen']]) 
 
                 if show_gameplay:
                     cv2.imshow('gameplay', trans['screen'])
@@ -353,6 +368,9 @@ class DQN:
 
                 if trans['is_last']:
                     temp = handle_ep(trans['episode_step'] + 1, trans['total_reward'])
+                    print('total reward: {}'.format(trans['total_reward']))
+                    with open('./{}.{}.rewards'.format(game, state), 'a') as fp:
+                        fp.write('{}\n'.format(trans['total_reward']))
 
                 replay_buffer.add_sample(trans)
                 steps_taken += 1
