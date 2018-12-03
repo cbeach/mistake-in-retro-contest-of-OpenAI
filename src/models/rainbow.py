@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
 import cv2
+import json
 import os
 from os import environ, path
+from glob import glob
 import tensorflow as tf
 import numpy as np
 import math
@@ -17,6 +19,46 @@ from rollouts import SumTree, Memory
 from .base import TFQNetwork
 from utils import take_vector_elems, get_models_dir, Panorama
 from .BaseNet import nature_cnn, noisy_net_dense, sample_noise, nature_cnn_add_one_layer, my_net
+
+def save_play(frames, actions, meta_data, info, rewards=None, as_pngs=False):
+    data_dir = os.environ['DATA_DIR']
+    play_dir = os.path.join(data_dir, 'game_playing/play_data')
+    plays = []
+    for i in glob(play_dir + '/*'):
+        plays.append(int(os.path.basename(i)))
+    if len(plays) == 0:
+        latest = 1
+    else:
+        latest = max(plays) + 1
+    new_play_dir = os.path.join(play_dir, str(latest))
+    os.mkdir(new_play_dir)
+
+    # frames
+    if as_pngs is True:
+        for i, f in enumerate(frames):
+            cv2.imwrite(os.path.join(new_play_dir, '{}.png'.format(i)), f)
+    else:
+        np.savez_compressed(os.path.join(new_play_dir, 'frames'), np.array(frames))
+    print('Done saving frames at {}'.format(os.path.join(new_play_dir, 'frames')))
+
+    # actions
+    with open(os.path.join(new_play_dir, 'actions'), 'w') as fp:
+        np.savez_compressed(os.path.join(new_play_dir, 'actions'), np.array(actions))
+    print('Done saving actions')
+
+    # info
+    with open(os.path.join(new_play_dir, 'info.json'), 'w') as fp:
+        json.dump(info, fp)
+    print('Done saving info')
+
+    # meta data
+    with open(os.path.join(new_play_dir, 'meta_data.json'), 'w') as fp:
+        json.dump(meta_data, fp)
+
+    # rewards
+    with open(os.path.join(new_play_dir, 'rewards'), 'w') as fp:
+        np.savez_compressed(os.path.join(new_play_dir, 'rewards'), np.array(rewards))
+
 
 class DistQNetwork(TFQNetwork):
     def __init__(self, session, num_actions, obs_vectorizer, name, num_atoms, min_val, max_val,
@@ -301,16 +343,9 @@ class DQN:
           timeout: if set, this is a number of seconds
             after which the training loop should exit.
         """
-        #Seriously?!??
         env = player.player.batched_env.env.envs[0][0].env.env.env.env.env.env
         emu = player.player.batched_env.env.envs[0][0].env.env.env.env.env.env.em
-        print('emu: {}'.format(dir(emu)))
-        print('env: {}'.format(dir(env)))
-        print('env.metadata: {}'.format(env.metadata))
-        print('env.data: {}'.format(env.data))
-        print('env.data: {}'.format(dir(env.data)))
-        print('env.data.list_variables(): {}'.format(env.data.list_variables()))
-        print('env.data.lookup_value("lives"): {}'.format(env.data.lookup_value("lives")))
+        action_map = player.player.batched_env.env.envs[0][0].env.env.env._actions
 
         sess = self.online_net.session
         sess.run(self.update_target)
@@ -321,25 +356,24 @@ class DQN:
         then = start_time
         stitched = None
         stitcher = Panorama()
-        #print(player.player.batched_env)
-        #print(player.player.batched_env.env)
-        print(player.player.batched_env.env.envs)
-        #print(player.player.batched_env.env.envs[0])
-        #print(player.player.batched_env.env.envs[0][0])
-        #print(player.player.batched_env.env.envs[0][0].env)
-        #print(player.player.batched_env.env.envs[0][0].env.env)
-        #print(player.player.batched_env.env.envs[0][0].env.env.env)
-        #print(player.player.batched_env.env.envs[0][0].env.env.env.env)
-        import inspect
-        print(inspect.getfile(player.player.batched_env.env.envs[0][0].env.env.env.env.env.env.__class__))
-        #sys.exit(0)
+        screens = []
+        actions = []
+        info = []
+        rewards = []
+        meta_data = {
+            'game': {
+                'name': game,
+                'state': state,
+            },
+            'frame_count': 0,
+        }
+
         for i in progressbar.progressbar(range(initial_step, num_steps), redirect_stdout=True):
             now = time.time()
             if timeout is not None and now - start_time > timeout:
                 return
 
             transitions = player.play()
-            #print(transitions[-1]['rewards'])
 
             if now - then >= 1:
                 then = now
@@ -347,30 +381,48 @@ class DQN:
             if show_map_matches or generate_map or show_map_matches:
                 if stitched is None:
                     stitched = transitions[0]['screen']
+            meta_data['frame_count'] += 1
 
             for trans in transitions:
-                #print(trans.keys())
+                screen = trans['screen']
+                screens.append(screen)
+                actions.append(action_map[trans['model_outs']['actions'][0]])
+                rewards.append(trans['rewards'][-1])
+                info.append(trans['info'])
+                # Make sure to delete screen because it WILL clobber your RAM
+                del(trans['screen'])
+
                 if show_map_matches and generate_map:
-                    result, vis = stitcher.stitch([stitched, trans['screen']], showMatches=True) 
+                    result, vis = stitcher.stitch([stitched, screen], showMatches=True)
                     cv2.imshow('map', result)
                     cv2.imshow('matches', vis)
                     cv2.waitKey(1)
                 elif show_map and generate_map and not show_map_matches:
-                    result = stitcher.stitch([stitched, trans['screen']]) 
+                    result = stitcher.stitch([stitched, screen])
                     cv2.imshow('map', stitched)
                     cv2.waitKey(1)
                 elif generate_map:
-                    result = stitcher.stitch([stitched, trans['screen']]) 
+                    result = stitcher.stitch([stitched, screen])
 
                 if show_gameplay:
-                    cv2.imshow('gameplay', trans['screen'])
+                    cv2.imshow('gameplay', screen)
                     cv2.waitKey(1)
 
                 if trans['is_last']:
                     temp = handle_ep(trans['episode_step'] + 1, trans['total_reward'])
                     print('total reward: {}'.format(trans['total_reward']))
-                    with open('./{}.{}.rewards'.format(game, state), 'a') as fp:
-                        fp.write('{}\n'.format(trans['total_reward']))
+                    save_play(screens, actions, meta_data, info, rewards, as_pngs=False)
+                    screens = []
+                    actions = []
+                    info = []
+                    rewards = []
+                    meta_data = {
+                        'game': {
+                            'name': game,
+                            'state': state,
+                        },
+                        'frame_count': 0,
+                    }
 
                 replay_buffer.add_sample(trans)
                 steps_taken += 1

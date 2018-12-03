@@ -26,12 +26,15 @@ def get_newest_model(game, state):
     models_dir = get_models_dir(game, state)
     print('models_dir: {}'.format(models_dir))
     checkpoints = []
-    for i in os.listdir(models_dir):
-        try:
-            checkpoints.append(int(i.replace('{}-'.format(state), '').split('.')[0]))
-        except ValueError as e:
-            pass
-    print('checkpoints: {}'.format(checkpoints))
+    if not os.path.exists(models_dir):
+        os.mkdirs(models_dir)
+    else:
+        for i in os.listdir(models_dir):
+            try:
+                checkpoints.append(int(i.replace('{}-'.format(state), '').split('.')[0]))
+            except ValueError as e:
+                pass
+        print('checkpoints: {}'.format(checkpoints))
 
     return max(checkpoints) if len(checkpoints) > 0 else None
 
@@ -91,7 +94,7 @@ def main():
         #print(sess.graph.get_tensor_by_name('layer_1:0'))
         #sys.exit(0)
 
-        if resume and model_number is not None:
+        if resume and model_number > 0:
             print('resuming at model number {}'.format(model_number))
             sess.run(tf.variables_initializer(optim.variables()))
         else:

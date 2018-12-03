@@ -12,7 +12,6 @@ def nature_cnn(obs_batch, dense=tf.layers.dense):
     }
     with tf.variable_scope('layer_1'):
         cnn_1 = tf.layers.conv2d(obs_batch, 32, 8, 4, **conv_kwargs)
-        print(cnn_1)
     with tf.variable_scope('layer_2'):
         cnn_2 = tf.layers.conv2d(cnn_1, 64, 4, 2, **conv_kwargs)
     with tf.variable_scope('layer_3'):
@@ -114,7 +113,6 @@ def my_net(obs_batch, dense=tf.layers.dense):
     }
     with tf.variable_scope('layer_1'):
         cnn_1 = tf.layers.conv2d(obs_batch, 32, 8, 4, **conv_kwargs)
-        print(cnn_1)
     with tf.variable_scope('layer_2'):
         with tf.variable_scope('first'):
             conv1 = tf.layers.conv2d(cnn_1, filters=64, kernel_size=3, strides=2, padding='SAME',

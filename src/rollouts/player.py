@@ -137,10 +137,6 @@ class BatchedPlayer(Player):
         end_time = time.time()
         transitions = []
         for i, (obs, rew, done, info) in enumerate(zip(*outs)):
-            if info['score'] > self.last_score:
-                rew = info['score'] - self.last_score
-                self.last_score = info['score']
-                print('rew: {}'.format(rew))
             if done:
                 self.last_score = 0
             self._total_rewards[sub_batch][i] += rew

@@ -81,14 +81,14 @@ def make_env(stack=True,
     """
     #env = grc.RemoteEnv('tmp/sock') #contest env
     platform = game.split('-')[1].lower()
-    print('platform: {}'.format(platform))
 
     replay_dir = get_replay_dir(game, state)
     if not path.isdir(replay_dir):
         os.makedirs(replay_dir)
 
     env = retro_make(game=game, state=state, record=replay_dir)
-    if game == "SuperMarioBros-Nes":
+    if game.startswith("SuperMario"):
+        print("a mario game")
         env = MarioDiscretizer(env, platform)
         env = GameOverAwareWrapper(env)
     else:
@@ -107,7 +107,6 @@ class MarioDiscretizer(gym.ActionWrapper):
     """
     def __init__(self, env, platform):
         super(MarioDiscretizer, self).__init__(env)
-        print("MarioDiscretizer")
 
         buttons = ['B', None, 'SELECT', 'START', 'UP', 'DOWN', 'LEFT', 'RIGHT', 'A']
         actions = [('B', 'A', 'DOWN', 'LEFT'),
@@ -143,8 +142,6 @@ class MarioDiscretizer(gym.ActionWrapper):
                 arr[buttons.index(button)] = True
             self._actions.append(arr)
         self.action_space = gym.spaces.Discrete(len(self._actions))
-        print('self.action_space')
-        print(self.action_space)
 
     def action(self, a): # pylint: disable=W0221
         return self._actions[a].copy()
