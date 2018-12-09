@@ -4,29 +4,47 @@ from collections import deque
 import gym
 from gym import spaces, Wrapper
 import cv2
+import sys
+from retro import retro_env
+
 cv2.ocl.setUseOpenCL(False)
 
 class GameOverAwareWrapper(Wrapper):
     def __init__(self, env):
-        super(GameOverAwareWrapper, self).__init__(env)    
+        super(GameOverAwareWrapper, self).__init__(env)
         self.info = {}
         self.reward = 0
         self.episode_number = 0
+        self.total_reward = 0
+        temp_env = env
+        while True:
+            if isinstance(temp_env, retro_env.RetroEnv):
+                self.ret_env = temp_env
+                self.emulator = self.ret_env.em
+                break
+            elif hasattr(temp_env, 'envs'):
+                temp_env = getattr(temp_env, 'envs')[0][0]
+            else:
+                temp_env = temp_env.env
 
     def step(self, action):
         observation, reward, done, info = self.env.step(action)
-        #self.reward = info['score']
+        self.total_reward += reward
         self.info = info
 
         if info.get('lives', 0) < 0:
             if self.metadata.get('semantics.autoreset'):
                 _ = self.reset() # automatically reset the env
-            done = True 
+            done = True
 
         return observation, reward, done, info
 
     def reset(self):
-        print('End of Episode {} - reward: {}, score: {}'.format(self.episode_number, self.reward, self.info.get('score', 0)))
+        print('End of Episode {}'.format(self.episode_number))
+        print('\tgame: {}, state: {}'.format(self.ret_env.gamename,
+                                             self.ret_env.statename.split('.')[0]))
+        print('\ttotal reward: {}'.format(self.total_reward))
+        self.total_reward = 0
         self.episode_number += 1
         return self.env.reset()
 

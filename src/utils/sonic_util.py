@@ -37,9 +37,9 @@ game_wrappers = {
 }
 
 
-def get_models_dir(game, state):
+def get_models_dir(game):
     base_data_dir = path.join(environ.get('DATA_DIR', environ.get('HOME', '.')), 'game_playing')
-    return path.join(base_data_dir, 'models/{}/'.format(game, state))
+    return path.join(base_data_dir, 'models/{}'.format(game))
 
 
 def get_replay_dir(game, state):
@@ -56,7 +56,7 @@ def retro_make(game, state=retro.State.DEFAULT, discrete_actions=False, bk2dir=N
     if discrete_actions:
         use_restricted_actions = retro.Actions.DISCRETE
     try:
-        env = retro.make(game, state, scenario='deep_thought', record=record, use_restricted_actions=use_restricted_actions)
+        env = retro.make(game, state, record=record, use_restricted_actions=use_restricted_actions)
     except Exception as e:
         print('EXCEPTION in retro_make')
         print(traceback.format_exc())
@@ -88,7 +88,6 @@ def make_env(stack=True,
 
     env = retro_make(game=game, state=state, record=replay_dir)
     if game.startswith("SuperMario"):
-        print("a mario game")
         env = MarioDiscretizer(env, platform)
         env = GameOverAwareWrapper(env)
     else:
@@ -228,8 +227,5 @@ class AllowBacktracking(gym.Wrapper):
 
     def step(self, action): # pylint: disable=E0202
         obs, rew, done, info = self.env.step(action)
-        self._cur_x += rew
-        rew = max(0, self._cur_x - self._max_x)
-        self._max_x = max(self._max_x, self._cur_x)
         return obs, rew, done, info
 

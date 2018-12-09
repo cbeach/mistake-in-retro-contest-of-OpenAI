@@ -5,6 +5,10 @@ import math
 import sys
 import time
 
+def fix_color_and_scale_image(img, scale=1):
+    return cv2.resize(cv2.cvtColor(img, cv2.COLOR_BGR2RGB),
+                      (int(img.shape[0] * 3), int(img.shape[1] * 3)))
+
 
 class Panorama:
     def __init__(self):
@@ -27,14 +31,14 @@ class Panorama:
         # if the match is None, then there aren't enough matched
         # keypoints to create a panorama
         if M is None:
-            return None   
+            return None
 
         # otherwise, apply a perspective warp to stitch the images
         # together
         (matches, H, T, status) = M
         T[0:2, 0:2] = np.array(((1, 0), (0, 1)))
-        x_trans = int(T[1][2]) 
-        y_trans = int(T[0][2]) 
+        x_trans = int(T[1][2])
+        y_trans = int(T[0][2])
         print('x_trans: {}'.format(x_trans))
         print('y_trans: {}'.format(y_trans))
 
@@ -77,27 +81,27 @@ class Panorama:
     def detectAndDescribe(self, image):
         # convert the image to grayscale
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
- 
+
         # check to see if we are using OpenCV 3.X
         if self.isv3:
             # detect and extract features from the image
             descriptor = cv2.xfeatures2d.SURF_create()
             (kps, features) = descriptor.detectAndCompute(image, None)
- 
+
         # otherwise, we are using OpenCV 2.4.X
         else:
             # detect keypoints in the image
             detector = cv2.FeatureDetector_create("SIFT")
             kps = detector.detect(gray)
- 
+
             # extract features from the image
             extractor = cv2.DescriptorExtractor_create("SIFT")
             (kps, features) = extractor.compute(gray, kps)
- 
+
         # convert the keypoints from KeyPoint objects to NumPy
         # arrays
         kps = np.float32([kp.pt for kp in kps])
- 
+
         # return a tuple of keypoints and features
         return (kps, features)
 
@@ -160,7 +164,7 @@ class RegionGraph:
         '''
         image: an image in numpy BGR format
         indirect_neighbors: Boolean value
-        ''' 
+        '''
         self.image = image
 
     def generate_graph(self):

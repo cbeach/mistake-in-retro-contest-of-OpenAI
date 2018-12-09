@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import git
 import cv2
 import json
 import os
@@ -10,28 +11,41 @@ import numpy as np
 import math
 from abc import abstractmethod
 from functools import partial
-import time
+import random
 import sys
+import time
 sys.path.append("..")
 import progressbar
+import gzip
 
 from rollouts import SumTree, Memory
 from .base import TFQNetwork
-from utils import take_vector_elems, get_models_dir, Panorama
+from utils import take_vector_elems, get_models_dir, Panorama, fix_color_and_scale_image
 from .BaseNet import nature_cnn, noisy_net_dense, sample_noise, nature_cnn_add_one_layer, my_net
+import retro
 
-def save_play(frames, actions, meta_data, info, rewards=None, as_pngs=False):
+def save_emulator_state(state_data, state_name, game):
+    retro_dir = os.path.join(os.environ['HOME'], 'dev/retro/retro/')
+    state_path = os.path.join(retro_dir, 'data/stable/{}/{}'.format(game, state_name))
+    print('saving state @ {}'.format(state_path))
+    if not os.path.isfile(state_path):
+        with gzip.open(state_path, 'wb') as fp:
+            fp.write(state_data)
+
+def save_play(frames, actions, meta_data, info, game, rewards=None, as_pngs=False):
     data_dir = os.environ['DATA_DIR']
-    play_dir = os.path.join(data_dir, 'game_playing/play_data')
+    play_dir = os.path.join(data_dir, 'game_playing/play_data/{}'.format(game))
     plays = []
+
     for i in glob(play_dir + '/*'):
         plays.append(int(os.path.basename(i)))
     if len(plays) == 0:
         latest = 1
     else:
         latest = max(plays) + 1
+
     new_play_dir = os.path.join(play_dir, str(latest))
-    os.mkdir(new_play_dir)
+    os.makedirs(new_play_dir)
 
     # frames
     if as_pngs is True:
@@ -39,17 +53,17 @@ def save_play(frames, actions, meta_data, info, rewards=None, as_pngs=False):
             cv2.imwrite(os.path.join(new_play_dir, '{}.png'.format(i)), f)
     else:
         np.savez_compressed(os.path.join(new_play_dir, 'frames'), np.array(frames))
-    print('Done saving frames at {}'.format(os.path.join(new_play_dir, 'frames')))
+    #print('Done saving frames at {}'.format(os.path.join(new_play_dir, 'frames')))
 
     # actions
     with open(os.path.join(new_play_dir, 'actions'), 'w') as fp:
         np.savez_compressed(os.path.join(new_play_dir, 'actions'), np.array(actions))
-    print('Done saving actions')
+    #print('Done saving actions')
 
     # info
     with open(os.path.join(new_play_dir, 'info.json'), 'w') as fp:
         json.dump(info, fp)
-    print('Done saving info')
+    #print('Done saving info')
 
     # meta data
     with open(os.path.join(new_play_dir, 'meta_data.json'), 'w') as fp:
@@ -292,10 +306,9 @@ class DQN:
         optim = tf.train.AdamOptimizer(learning_rate=learning_rate, epsilon=epsilon, **adam_kwargs)
         return optim, optim.minimize(self.loss)
 
-    def save_model(self, sess, steps_taken, game, state):
-        models_dir = path.join(get_models_dir(game, state), state)
+    def save_model(self, sess, steps_taken, game):
+        models_dir = path.join(get_models_dir(game), game)
         saved_model_path = self.saver.save(sess=sess, save_path=models_dir, global_step=steps_taken)
-        print('model saved as: {}'.format(saved_model_path))
 
     def train(self,
               num_steps,
@@ -343,9 +356,21 @@ class DQN:
           timeout: if set, this is a number of seconds
             after which the training loop should exit.
         """
-        env = player.player.batched_env.env.envs[0][0].env.env.env.env.env.env
+
+        # 'action_space', 'action_to_array', 'auto_record', 'button_combos', 'buttons', 'close',
+        # 'compute_step', 'data', 'em', 'gamename', 'get_action_meaning', 'get_screen', 'img',
+        # 'initial_state', 'load_state', 'metadata', 'movie', 'movie_id', 'movie_path',
+        # 'np_random', 'num_buttons', 'observation_space', 'players', 'record_movie', 'render',
+        #'reset', 'reward_range', 'seed', 'spec', 'statename', 'step', 'stop_record', 'system',
+        # 'unwrapped', 'use_restricted_actions', 'viewer'
+        retro_env = player.player.batched_env.env.envs[0][0].env.env.env.env.env.env
+        # 'add_cheat', 'clear_cheats', 'configure_data', 'get_audio', 'get_audio_rate',
+        # 'get_resolution', 'get_screen', 'get_screen_rate', 'get_state', 'load_core_info',
+        # 'set_button_mask', 'set_state', 'step'
         emu = player.player.batched_env.env.envs[0][0].env.env.env.env.env.env.em
+        print('resolution: {}'.format(emu.get_resolution()))
         action_map = player.player.batched_env.env.envs[0][0].env.env.env._actions
+        state_list = retro.data.list_states(game)
 
         sess = self.online_net.session
         sess.run(self.update_target)
@@ -366,7 +391,11 @@ class DQN:
                 'state': state,
             },
             'frame_count': 0,
+            'player': 'model'
         }
+        current_world = 0
+        current_level = 0
+        level_transition = False
 
         for i in progressbar.progressbar(range(initial_step, num_steps), redirect_stdout=True):
             now = time.time()
@@ -384,6 +413,45 @@ class DQN:
             meta_data['frame_count'] += 1
 
             for trans in transitions:
+                """
+                    trans:
+                        obs
+                        model_outs
+                        rewards
+                        new_obs
+                        info:
+                            score
+                            lives
+                            world
+                            level
+                            xscrollHi
+                            xscrollLo
+                            prev_lives
+                            time
+                            scrolling
+                            coins
+                        start_state
+                        episode_id
+                        episode_step
+                        end_time
+                        is_last
+                        screen
+                        total_reward
+                """
+                t_info = trans['info']
+                if current_world != t_info['world'] or current_level != t_info['level']:
+                    level_transition = True
+                    current_world = t_info['world']
+                    current_level = t_info['level']
+                if level_transition and t_info['time'] > 0:
+                    level_transition = False
+                    new_state_name = 'Level{}-{}.state'.format(t_info['world'] + 1, t_info['level'] + 1)
+                    if new_state_name.split('.')[0] not in state_list:
+                        print('-------------------- New Level! --------------------')
+                        print("t_info['world']:", t_info['world'], "t_info['level']:", t_info['level'])
+                        print('current_world:', current_world, 'current_level:', current_level)
+                        save_emulator_state(emu.get_state(), new_state_name, game)
+
                 screen = trans['screen']
                 screens.append(screen)
                 actions.append(action_map[trans['model_outs']['actions'][0]])
@@ -405,24 +473,23 @@ class DQN:
                     result = stitcher.stitch([stitched, screen])
 
                 if show_gameplay:
-                    cv2.imshow('gameplay', screen)
+                    cv2.imshow('gameplay', fix_color_and_scale_image(screen, 2))
                     cv2.waitKey(1)
 
                 if trans['is_last']:
                     temp = handle_ep(trans['episode_step'] + 1, trans['total_reward'])
-                    print('total reward: {}'.format(trans['total_reward']))
-                    save_play(screens, actions, meta_data, info, rewards, as_pngs=False)
+                    save_play(screens, actions, meta_data, info, game, rewards)
                     screens = []
                     actions = []
                     info = []
                     rewards = []
-                    meta_data = {
-                        'game': {
-                            'name': game,
-                            'state': state,
-                        },
-                        'frame_count': 0,
-                    }
+                    meta_data['frame_count'] = 0
+
+                    next_state = random.choice(state_list)
+                    print('\tnext state: {}'.format(next_state))
+                    meta_data['game']['state'] = next_state
+                    retro_env.load_state(next_state)
+                    retro_env.reset()
 
                 replay_buffer.add_sample(trans)
                 steps_taken += 1
@@ -435,11 +502,11 @@ class DQN:
                                          feed_dict=self.feed_dict(batch))
                     replay_buffer.update_weights(batch, losses)
                     if steps_taken % save_iters == 0:
-                        self.save_model(sess, steps_taken, game, state)
+                        self.save_model(sess, steps_taken, game)
                 if steps_taken >= next_target_update:
                     next_target_update = steps_taken + target_interval
                     sess.run(self.update_target)
-        self.save_model(sess, steps_taken, game, state)
+        self.save_model(sess, steps_taken, game)
 
     def _discounted_rewards(self, rews):
         res = 0

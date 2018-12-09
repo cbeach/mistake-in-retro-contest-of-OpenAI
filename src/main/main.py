@@ -22,22 +22,6 @@ def handle_ep(steps, reward):
         fp.seek(0)
         rewards.append({'steps': steps, 'reward': reward})
 
-def get_newest_model(game, state):
-    models_dir = get_models_dir(game, state)
-    print('models_dir: {}'.format(models_dir))
-    checkpoints = []
-    if not os.path.exists(models_dir):
-        os.mkdirs(models_dir)
-    else:
-        for i in os.listdir(models_dir):
-            try:
-                checkpoints.append(int(i.replace('{}-'.format(state), '').split('.')[0]))
-            except ValueError as e:
-                pass
-        print('checkpoints: {}'.format(checkpoints))
-
-    return max(checkpoints) if len(checkpoints) > 0 else None
-
 
 def main():
     """Run DQN until the environment throws an exception."""
@@ -70,6 +54,7 @@ def main():
 
     env = AllowBacktracking(make_env(stack=False, scale_rew=False, game=game, state=state))
     env = BatchedFrameStack(BatchedGymEnv([[env]]), num_images=4, concat=False)
+
     config = tf.ConfigProto()
     config.gpu_options.allow_growth = True # pylint: disable=E1101
     with tf.Session(config=config) as sess:
@@ -79,20 +64,17 @@ def main():
                                   min_val=-200,
                                   max_val=200))
         player = NStepPlayer(BatchedPlayer(env, dqn.online_net), 4)
-        model_number = get_newest_model(game, state)
-        print('model_number: {}'.format(model_number))
         print('resume: {}'.format(resume))
-        if resume and model_number is not None:
-            model_name = path.join(get_models_dir(game, state), '{}-{}'.format(state, model_number))
+        if resume and tf.train.latest_checkpoint(get_models_dir(game)) is not None:
+            model_path = tf.train.latest_checkpoint(get_models_dir(game))
+            print('model_path: {}'.format(model_path))
             saver = tf.train.Saver()
-            saver.restore(sess, model_name)
-            print('loaded model {}'.format(model_name))
+            saver.restore(sess, model_path)
+            print('loaded model {}'.format(model_path))
+            model_number = int(model_path.split('-')[-1])
         else:
             model_number = 0
         optim, optimize = dqn.optimize(learning_rate=0.0001)
-        #import pdb; pdb.set_trace()
-        #print(sess.graph.get_tensor_by_name('layer_1:0'))
-        #sys.exit(0)
 
         if resume and model_number > 0:
             print('resuming at model number {}'.format(model_number))
