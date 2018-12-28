@@ -450,6 +450,8 @@ class DQN:
                         print('-------------------- New Level! --------------------')
                         print("t_info['world']:", t_info['world'], "t_info['level']:", t_info['level'])
                         print('current_world:', current_world, 'current_level:', current_level)
+                        state_list = retro.data.list_states(game)
+                        print(state_list)
                         save_emulator_state(emu.get_state(), new_state_name, game)
 
                 screen = trans['screen']

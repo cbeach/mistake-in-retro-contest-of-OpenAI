@@ -1,12 +1,18 @@
 #!/usr/bin/env python
 
 import argparse
-import tensorflow as tf
 import json
 import sys
 import os
 from os import environ, path
 sys.path.append('..')
+
+import tensorflow as tf
+if tf.test.is_gpu_available() is True:
+    print('Using GPU')
+else:
+    print('GPU unavailable!')
+    sys.exit(1)
 
 from rollouts import PrioritizedReplayBuffer, NStepPlayer, BatchedPlayer
 from envs import BatchedFrameStack, BatchedGymEnv
